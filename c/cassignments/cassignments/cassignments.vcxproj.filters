@@ -21,5 +21,8 @@
     <ClCompile Include="GrossSalary.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SumOfDigits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

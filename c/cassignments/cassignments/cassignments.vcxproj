@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="GrossSalary.c" />
     <ClCompile Include="MinMaxAverage.c" />
+    <ClCompile Include="SumOfDigits.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
