@@ -24,5 +24,8 @@
     <ClCompile Include="SumOfDigits.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pyramid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
