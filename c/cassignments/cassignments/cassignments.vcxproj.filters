@@ -18,5 +18,8 @@
     <ClCompile Include="MinMaxAverage.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GrossSalary.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
