@@ -4,6 +4,7 @@ int main()
 	long int a=1;
 	long int i = 0, sum = 0, min = 65535, max = 0;
 	double avg;
+	printf("enter positive numbers  entering negative numbers breaks the loop: ");
 	while (a > 0)
 	{
 		scanf_s("%ld", &a);

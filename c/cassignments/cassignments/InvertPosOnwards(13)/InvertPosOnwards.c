@@ -1,5 +1,9 @@
+//program to invert bits from a position specified
+
+
+
 #include<stdio.h>
-void RotatePosOnwards(long int, int,int);
+void InvertPosOnwards(long int, int,int);
 int main()
 {
 	long int n = 0;
@@ -10,10 +14,10 @@ int main()
 	scanf("%d", &p);
 	printf("enter number of bits to be inverted:");
 	scanf("%d", &b);
-	RotatePosOnwards(n, p, b);
+	InvertPosOnwards(n, p, b);
 	return 0;
 }
-void RotatePosOnwards(long int n, int p, int b)
+void InvertPosOnwards(long int n, int p, int b)
 {
 	long int temp=0;
 	int a[100], k = 0,i=0;
@@ -39,6 +43,7 @@ void RotatePosOnwards(long int n, int p, int b)
 			k++;
 		}
 	}
+	printf("binary representation after inverting bits as per given inputs :");
 	for (i = k; i >=0; i--)
 	{
 		printf("%d", a[i]);

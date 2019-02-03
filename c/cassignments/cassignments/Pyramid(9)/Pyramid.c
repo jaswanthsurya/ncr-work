@@ -1,7 +1,10 @@
+//program to print pattern of pyramid
+
 #include<stdio.h>
 int main()
 {
 	int n = 0,t=0,i=0,j=0,flag=0;
+	printf("enter number of lines :");
 	scanf("%d", &n);
 	for (i = 1; i <= n; i++)
 	{

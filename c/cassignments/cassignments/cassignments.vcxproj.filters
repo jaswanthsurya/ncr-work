@@ -39,5 +39,11 @@
     <ClCompile Include="IntToBinAndIntTOHex.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Palindrome.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Armstrong.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

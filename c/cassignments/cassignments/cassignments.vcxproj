@@ -143,9 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Armstrong.c" />
     <ClCompile Include="GrossSalary.c" />
     <ClCompile Include="IntToBinAndIntTOHex.c" />
     <ClCompile Include="MinMaxAverage.c" />
+    <ClCompile Include="Palindrome.c" />
     <ClCompile Include="Pyramid.c" />
     <ClCompile Include="RotatePosOnwards.c" />
     <ClCompile Include="Rotate_Right.c" />

@@ -1,7 +1,13 @@
+//Program to find gross salary
+//gross salary = basicsalaray +HRA+DA
+
+
+
 #include<stdio.h>
 int main()
 {
 	double BaseSalary, HRA , DA ;
+	printf("enter the base salary : ");
 	scanf("%lf", &BaseSalary);
 	if (BaseSalary <= 4000)
 	{

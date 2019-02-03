@@ -1,3 +1,6 @@
+//program to rotate a number rightside by given number of bits
+
+
 #include<stdio.h>
 void rotate_right(long int, int);
 int main()

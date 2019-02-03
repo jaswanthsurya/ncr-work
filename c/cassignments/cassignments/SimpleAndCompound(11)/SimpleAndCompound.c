@@ -1,3 +1,9 @@
+//program to find simple interest and compound interest 
+//simple interest doesnot change when computed yearly or quarterly
+//compound interest changes
+
+
+
 #include<stdio.h>
 #include<math.h>
 void SimpleInterest(int);
@@ -6,11 +12,16 @@ double Principal = 500000;
 int time = 10,RateOfInterest=10;
 int main()
 {
+	printf("principal amount : %lf\n",Principal);
+	printf("time : %d\n",time);
+	printf("rate of interest : %d\n",RateOfInterest);
+	printf("---------simple interest--------\n");
 	SimpleInterest(1);
 	SimpleInterest(2);
 	SimpleInterest(4);
 	SimpleInterest(365);
 	SimpleInterest(3650);
+	printf("-------compound interest------\n");
 	CompoundInterest(1);
 	CompoundInterest(2);
 	CompoundInterest(4);

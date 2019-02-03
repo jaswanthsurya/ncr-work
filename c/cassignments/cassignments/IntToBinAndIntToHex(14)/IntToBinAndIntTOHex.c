@@ -1,10 +1,16 @@
+//program to convert integer to binary and integer to hexadecimal
+// integer to binary is done using double dabble method
+//integer to hexadecimal is done by using inbuilt typecasting
+
+
+
 #include<stdio.h>
 void IntToBin(int);
 void IntToHex(int);
 int main()
 {
 	int num = 0;
-	printf("enter the number");
+	printf("enter the number : ");
 	scanf("%d", &num);
 	IntToBin(num);
 	printf("\n");
@@ -22,6 +28,7 @@ void IntToBin(int num)
 		k++;
 	}
 	k--;
+	printf("binary representation of given number is : ");
 	while (k >= 0)
 	{
 		printf("%d", a[k]);
@@ -30,5 +37,5 @@ void IntToBin(int num)
 }
 void IntToHex(int num)
 {
-	printf("%x", num);
+	printf("hexadecimal representation of given number is: %x", num);
 }
