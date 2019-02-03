@@ -146,6 +146,7 @@
     <ClCompile Include="GrossSalary.c" />
     <ClCompile Include="MinMaxAverage.c" />
     <ClCompile Include="Pyramid.c" />
+    <ClCompile Include="RotatePosOnwards.c" />
     <ClCompile Include="Rotate_Right.c" />
     <ClCompile Include="SimpleAndCompound.c" />
     <ClCompile Include="SumOfDigits.c" />
