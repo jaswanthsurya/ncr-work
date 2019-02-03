@@ -27,5 +27,8 @@
     <ClCompile Include="Pyramid.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SimpleAndCompound.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
