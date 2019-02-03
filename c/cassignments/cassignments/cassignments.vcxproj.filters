@@ -36,5 +36,8 @@
     <ClCompile Include="RotatePosOnwards.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IntToBinAndIntTOHex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
