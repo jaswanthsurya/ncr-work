@@ -1,3 +1,6 @@
+//find minimum and maximum and average of series of numbers
+
+
 #include<stdio.h>
 int main()
 {
