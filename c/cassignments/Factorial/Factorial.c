@@ -1,7 +1,7 @@
 //program to find factorial of given number
 
 #include<stdio.h>
-long int fact(int);
+long int fact(long int);
 int main()
 {
 	long int num=0,res=0;
@@ -11,7 +11,7 @@ int main()
 	printf("factorial of %ld is : %ld", num, res);
 }
 
-long int fact(int num)
+long int fact(long int num)
 {
 	if (num == 0 || num == 1)
 	{
