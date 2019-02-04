@@ -15,34 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MinMaxAverage.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GrossSalary.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SumOfDigits.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Pyramid.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleAndCompound.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Rotate_Right.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RotatePosOnwards.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IntToBinAndIntTOHex.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Palindrome.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Armstrong.c">
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cassignments\GrossSalary(8)\GrossSalary.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

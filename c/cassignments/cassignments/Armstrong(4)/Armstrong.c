@@ -8,7 +8,7 @@ long int num1 = 0;
 int main()
 {
 	printf("enter the number: ");
-	scanf("%ld", &num1);
+	scanf_s("%ld", &num1);
 	Armstrong(num1);
 	return 0;
 }

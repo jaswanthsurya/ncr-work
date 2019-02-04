@@ -8,7 +8,7 @@ int main()
 {
 	double BaseSalary, HRA , DA ;
 	printf("enter the base salary : ");
-	scanf("%lf", &BaseSalary);
+	scanf_s("%lf", &BaseSalary);
 	if (BaseSalary <= 4000)
 	{
 		HRA = (BaseSalary * 10)/100;

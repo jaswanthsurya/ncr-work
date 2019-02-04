@@ -8,9 +8,9 @@ int main()
 	long int n = 0;
 	int b = 0;
 	printf("enter the number  :");
-	scanf("%ld", &n);
+	scanf_s("%ld", &n);
 	printf("enter numbers of bits to be shifted :");
-	scanf("%d",&b);
+	scanf_s("%d",&b);
 	rotate_right(n, b);
 	return 0;
 }

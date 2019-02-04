@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\c",
+    "\\c\\cassignments",
+    "\\c\\cassignments\\Armstrongnumber"
   ],
-  "SelectedNode": "\\day 2",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

@@ -11,7 +11,7 @@ int main()
 {
 	int num = 0;
 	printf("enter the number : ");
-	scanf("%d", &num);
+	scanf_s("%d", &num);
 	IntToBin(num);
 	printf("\n");
 	IntToHex(num);
