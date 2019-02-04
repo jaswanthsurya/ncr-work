@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SumOfDigits", "SumOfDigits\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MinMaxAvg", "MinMaxAvg\MinMaxAvg.vcxproj", "{0CBD7E1A-D9DA-4C2B-BA19-3D54DFB569EB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calculator", "Calculator\Calculator.vcxproj", "{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{0CBD7E1A-D9DA-4C2B-BA19-3D54DFB569EB}.Release|x64.Build.0 = Release|x64
 		{0CBD7E1A-D9DA-4C2B-BA19-3D54DFB569EB}.Release|x86.ActiveCfg = Release|Win32
 		{0CBD7E1A-D9DA-4C2B-BA19-3D54DFB569EB}.Release|x86.Build.0 = Release|Win32
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Debug|x64.ActiveCfg = Debug|x64
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Debug|x64.Build.0 = Debug|x64
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Debug|x86.ActiveCfg = Debug|Win32
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Debug|x86.Build.0 = Debug|Win32
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Release|x64.ActiveCfg = Release|x64
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Release|x64.Build.0 = Release|x64
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Release|x86.ActiveCfg = Release|Win32
+		{A2E8F108-64A1-4F34-9EA1-D0AA0FF0BB92}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
