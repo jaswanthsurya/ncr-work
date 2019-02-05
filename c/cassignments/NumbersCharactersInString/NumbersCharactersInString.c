@@ -10,17 +10,17 @@ int main()
 	gets(str);
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ')
+		if (str[i] == 32)
 		{
 			space++;
 		}
 		else
 		{
-			if ('0' <= str[i] <= '9')
+			if (48 <= str[i] && str[i]<= 57)
 			{
 				numbers++;
 			}
-			else if ('A' <= str[i] <= 'z')
+			else if (65 <= str[i] && str[i] <= 122)
 			{
 				characters++;
 			}
