@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cassignments\InvertPosOnwards(13)\InvertPosOnwards.c">
+    <ClCompile Include="InvertPosOnwards.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cassignments\IntToBinAndIntToHex(14)\IntToBinAndIntTOHex.c">
+    <ClCompile Include="IntToBinAndIntTOHex.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

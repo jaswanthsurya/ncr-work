@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cassignments\MinMaxAverage(7)\MinMaxAverage(7).c">
+    <ClCompile Include="MinMaxAverage(7).c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cassignments\SimpleAndCompound(11)\SimpleAndCompound.c">
+    <ClCompile Include="SimpleAndCompound.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

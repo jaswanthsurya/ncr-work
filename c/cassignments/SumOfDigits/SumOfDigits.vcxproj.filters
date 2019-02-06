@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cassignments\SumOfDigits(10)\SumOfDigits.c">
+    <ClCompile Include="SumOfDigits.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

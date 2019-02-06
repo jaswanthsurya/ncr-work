@@ -13,20 +13,13 @@ int main()
 }
 void reverseNum(int num)
 {
-	long int temp = 0;
-	int a[100],k=0,i=0;
+	long int temp = 0,a=0;
+	int k = 0, i = 0;
 	while (num > 0)
 	{
 		temp = num % 10;
 		num = num / 10;
-		a[k] = temp;
-		k++;
+		a = (a*10)+temp;
 	}
-	k--;
-	i = k;
-	while (k >= 0)
-	{
-		printf("%d", a[i-k]);
-		k--;
-	}
+	printf("%ld", a);
 }

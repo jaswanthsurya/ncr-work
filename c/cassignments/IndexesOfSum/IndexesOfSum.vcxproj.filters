@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pyramid.c">
+    <ClCompile Include="IndexesOfSum.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

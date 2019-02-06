@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cassignments\Palindrome(5)\Palindrome.c">
+    <ClCompile Include="Palindrome.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

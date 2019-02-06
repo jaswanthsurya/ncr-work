@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cassignments\Rotate_Right(12)\Rotate_Right.c">
+    <ClCompile Include="Rotate_Right.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

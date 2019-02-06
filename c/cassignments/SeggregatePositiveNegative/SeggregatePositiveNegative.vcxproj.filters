@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pyramid.c">
+    <ClCompile Include="SeggregatePositiveNegative.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
