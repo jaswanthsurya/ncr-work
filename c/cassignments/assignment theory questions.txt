@@ -1,0 +1,59 @@
+ASSIGNMENT 3 FIFTH QUESTION:
+
+
+C program contains the following declaration int x[8]= {10,20,30,40,50,60,70,80};
+Analyze the meaning of below statements
+a. What is the meaning of x?
+	Represents base address of array.
+b. What is the meaning of (x+2)?
+	Represents address of third element in the array i.e. x[2]
+c. What is the value of *x?
+	*x = content of first element in the array i.e. 10
+d. What is the value of (*x+2)?
+	*x = 10
+	Ans: 12
+e. What is the value of *(x+2)?
+	30
+-----------------------------------------------------------------------------------------
+
+ASSIGNMENT FOUR QUESTIONS:
+
+
+A C program contains the following declaration
+float table[2][3] = { { 1.1,1.2,1.3},{2.1,2.2,2.3}};
+a) What is the meaning of a table?
+	Table represents a pointer that points the first row.
+b) What is the meaning of (table+1)?
+	Represents the second row.
+c) What is the meaning of *(table+1)?
+	Represents the second row first coloumn.
+d) What is the meaning of (*(table+1)+1)?
+	Represents the second row second coloumn
+e) What is the meaning of (*(table)+1)?
+	Represents first row second coloumn.
+f) What is the value of *(*(table+1) +1)?
+	2.2
+g) What is the value of *(*(table)+1)?
+	1.2
+h) What is the value of *(*(table+1))?
+	2.1
+i) What is the value of *(*(table) + 1)+1?
+	1.2 + 1 =2.2
+
+-------------------------------------------------------------------------------------------
+
+A C program contains the following declaration
+char *color[6] = {“red”, “green”, “blue”, “white”, “black”, “yellow”};
+a. What is the meaning of color?
+	address of red.
+b. What is the meaning of (color+2);
+	address of blue.
+c. What is the value of *color?
+	red
+d. What is the value of *(color+2)?
+	blue
+e. How do color[5] and *(color + 5) differ?.
+	color[5] represents address of yellow.
+	*(color +5) represents yellow.
+
+--------------------------------------------------------------------------------------------
