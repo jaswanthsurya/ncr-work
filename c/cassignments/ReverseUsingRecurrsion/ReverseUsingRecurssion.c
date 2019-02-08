@@ -12,12 +12,7 @@ int main()
 	gets(s);
 	len = strlen(s);
 	p = s;
-	len--;
-	while (len >= 1)
-	{
-		p++;
-		len--;
-	}
+	p = p + (--len);
 	recurstr(s,p);
 	printf("%s", s);
 	return 0;

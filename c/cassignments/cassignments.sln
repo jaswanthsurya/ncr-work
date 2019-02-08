@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReverseUsingRecurrsion", "R
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReplaceSpace", "ReplaceSpace\ReplaceSpace.vcxproj", "{3CB22136-368E-4F38-9D9E-63C88BE4EF4A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LowerCaseToUpper", "LowerCaseToUpper\LowerCaseToUpper.vcxproj", "{821EF53B-5DA8-4B6C-B696-BFD07E895F70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -251,6 +253,14 @@ Global
 		{3CB22136-368E-4F38-9D9E-63C88BE4EF4A}.Release|x64.Build.0 = Release|x64
 		{3CB22136-368E-4F38-9D9E-63C88BE4EF4A}.Release|x86.ActiveCfg = Release|Win32
 		{3CB22136-368E-4F38-9D9E-63C88BE4EF4A}.Release|x86.Build.0 = Release|Win32
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Debug|x64.ActiveCfg = Debug|x64
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Debug|x64.Build.0 = Debug|x64
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Debug|x86.ActiveCfg = Debug|Win32
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Debug|x86.Build.0 = Debug|Win32
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Release|x64.ActiveCfg = Release|x64
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Release|x64.Build.0 = Release|x64
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Release|x86.ActiveCfg = Release|Win32
+		{821EF53B-5DA8-4B6C-B696-BFD07E895F70}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
