@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cppassignments", "cppassign
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentDetails", "StudentDetails\StudentDetails.vcxproj", "{3EADB005-9B06-4211-99B4-BBF4850F4E49}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Addcomplex", "Addcomplex\Addcomplex.vcxproj", "{CD4554B0-5E85-4898-9A2E-7D0826682B69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{3EADB005-9B06-4211-99B4-BBF4850F4E49}.Release|x64.Build.0 = Release|x64
 		{3EADB005-9B06-4211-99B4-BBF4850F4E49}.Release|x86.ActiveCfg = Release|Win32
 		{3EADB005-9B06-4211-99B4-BBF4850F4E49}.Release|x86.Build.0 = Release|Win32
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Debug|x64.ActiveCfg = Debug|x64
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Debug|x64.Build.0 = Debug|x64
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Debug|x86.ActiveCfg = Debug|Win32
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Debug|x86.Build.0 = Debug|Win32
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Release|x64.ActiveCfg = Release|x64
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Release|x64.Build.0 = Release|x64
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Release|x86.ActiveCfg = Release|Win32
+		{CD4554B0-5E85-4898-9A2E-7D0826682B69}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
