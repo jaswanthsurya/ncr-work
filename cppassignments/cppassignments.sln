@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Addcomplex", "Addcomplex\Ad
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swap", "swap\swap.vcxproj", "{D9BE7C0A-5C6E-43A6-BC04-29E9E797EE1D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArithUsingInline", "ArithUsingInline\ArithUsingInline.vcxproj", "{2B821D91-88A3-49B2-84A0-ACA24D577BA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{D9BE7C0A-5C6E-43A6-BC04-29E9E797EE1D}.Release|x64.Build.0 = Release|x64
 		{D9BE7C0A-5C6E-43A6-BC04-29E9E797EE1D}.Release|x86.ActiveCfg = Release|Win32
 		{D9BE7C0A-5C6E-43A6-BC04-29E9E797EE1D}.Release|x86.Build.0 = Release|Win32
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Debug|x64.ActiveCfg = Debug|x64
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Debug|x64.Build.0 = Debug|x64
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Debug|x86.ActiveCfg = Debug|Win32
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Debug|x86.Build.0 = Debug|Win32
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Release|x64.ActiveCfg = Release|x64
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Release|x64.Build.0 = Release|x64
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Release|x86.ActiveCfg = Release|Win32
+		{2B821D91-88A3-49B2-84A0-ACA24D577BA6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
