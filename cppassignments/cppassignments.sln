@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DistanceProb", "DistancePro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DistanceInCord", "DistanceInCord\DistanceInCord.vcxproj", "{D58774E2-182C-412F-A49B-1BCC78AFE602}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConDesExpla", "ConDesExpla\ConDesExpla.vcxproj", "{E77CC981-8526-4A84-BE8F-3FFD13000645}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{D58774E2-182C-412F-A49B-1BCC78AFE602}.Release|x64.Build.0 = Release|x64
 		{D58774E2-182C-412F-A49B-1BCC78AFE602}.Release|x86.ActiveCfg = Release|Win32
 		{D58774E2-182C-412F-A49B-1BCC78AFE602}.Release|x86.Build.0 = Release|Win32
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Debug|x64.ActiveCfg = Debug|x64
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Debug|x64.Build.0 = Debug|x64
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Debug|x86.ActiveCfg = Debug|Win32
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Debug|x86.Build.0 = Debug|Win32
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Release|x64.ActiveCfg = Release|x64
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Release|x64.Build.0 = Release|x64
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Release|x86.ActiveCfg = Release|Win32
+		{E77CC981-8526-4A84-BE8F-3FFD13000645}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
