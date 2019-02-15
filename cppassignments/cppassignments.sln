@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConDesExpla", "ConDesExpla\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polar", "polar\polar.vcxproj", "{03D94053-0AD5-4FB9-811F-6DAC71F921B3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "studentprob", "studentprob\studentprob.vcxproj", "{608845D0-39D6-42D9-BFA0-DA9860D5F13A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{03D94053-0AD5-4FB9-811F-6DAC71F921B3}.Release|x64.Build.0 = Release|x64
 		{03D94053-0AD5-4FB9-811F-6DAC71F921B3}.Release|x86.ActiveCfg = Release|Win32
 		{03D94053-0AD5-4FB9-811F-6DAC71F921B3}.Release|x86.Build.0 = Release|Win32
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Debug|x64.ActiveCfg = Debug|x64
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Debug|x64.Build.0 = Debug|x64
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Debug|x86.ActiveCfg = Debug|Win32
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Debug|x86.Build.0 = Debug|Win32
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Release|x64.ActiveCfg = Release|x64
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Release|x64.Build.0 = Release|x64
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Release|x86.ActiveCfg = Release|Win32
+		{608845D0-39D6-42D9-BFA0-DA9860D5F13A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
