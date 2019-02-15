@@ -11,7 +11,7 @@ class student {
 	int marks[3];
 	char grade;
 public:
-	friend void calTot(student s, int n);
+	friend void calTot(student s[], int n);
 	friend istream& operator >> (istream &cin, student &s);
 	friend ostream& operator << (ostream &cout, student &s);
 };
@@ -41,49 +41,45 @@ istream & operator >>(istream &cin, student &s)
 	s.totalMarks = 0;
 	return cin;
 }
-void calTot(student s, int n)
+void calTot(student s[], int n)
 {
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < n; i++)
 	{
-		cout << s;
-	}
-	for (int i = 0; i < 3; i++)
-	{
-		s.totalMarks = s.totalMarks + s.marks[i];
-	}
-	if (s.totalMarks > 60)
-	{
-		s.grade = 'A';
-		cout << "total marks: " << s.totalMarks<<endl;
-		cout << "grade :" << s.grade<<endl;
-	}
-	else if (s.totalMarks > 40 && s.totalMarks<60)
-	{
-		s.grade = 'B';
-		cout << "total marks: " << s.totalMarks<<endl;
-		cout << "grade :" << s.grade<<endl;
-	}
-	else
-	{
-		s.grade = 'C';
-		cout << "total marks: " << s.totalMarks<<endl;
-		cout << "grade :" << s.grade<<endl;
+		cout << s[i];
+		for (int j = 0; j < 3; j++)
+		{
+			s[i].totalMarks = s[i].totalMarks + s[i].marks[j];
+		}
+		if (s[i].totalMarks > 60)
+		{
+			s[i].grade = 'A';
+			cout << "total marks: " << s[i].totalMarks << endl;
+			cout << "grade :" << s[i].grade << endl;
+		}
+		else if (s[i].totalMarks > 40 && s[i].totalMarks < 60)
+		{
+			s[i].grade = 'B';
+			cout << "total marks: " << s[i].totalMarks << endl;
+			cout << "grade :" << s[i].grade << endl;
+		}
+		else
+		{
+			s[i].grade = 'C';
+			cout << "total marks: " << s[i].totalMarks << endl;
+			cout << "grade :" << s[i].grade << endl;
+		}
 	}
 }
 int main()
 {
 	const int n=3;
-	int i = 0, roll, a[3], j = 0;
-	char stri[20];
+	int i = 0;
 	student s[n];
 	for (i = 0; i < n; i++)
 	{
 		cin >> s[i];
 	}
 	cout << "student details are -----------------------------------------------------------" << endl;
-	for (i = 0; i < 3; i++)
-	{
-		calTot(s[i], 3);
-	}
+	calTot(s, 3);
 	return 0;
 }
