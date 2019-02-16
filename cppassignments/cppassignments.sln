@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "studentprob", "studentprob\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "employeeProb", "employeeProb\employeeProb.vcxproj", "{B387BE21-8BAB-40E6-B293-A76EA43CFF4D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "overloading", "overloading\overloading.vcxproj", "{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{B387BE21-8BAB-40E6-B293-A76EA43CFF4D}.Release|x64.Build.0 = Release|x64
 		{B387BE21-8BAB-40E6-B293-A76EA43CFF4D}.Release|x86.ActiveCfg = Release|Win32
 		{B387BE21-8BAB-40E6-B293-A76EA43CFF4D}.Release|x86.Build.0 = Release|Win32
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Debug|x64.ActiveCfg = Debug|x64
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Debug|x64.Build.0 = Debug|x64
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Debug|x86.ActiveCfg = Debug|Win32
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Debug|x86.Build.0 = Debug|Win32
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Release|x64.ActiveCfg = Release|x64
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Release|x64.Build.0 = Release|x64
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Release|x86.ActiveCfg = Release|Win32
+		{2A956AE3-8F37-4F1F-85DD-3CF8A0C7F42F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
