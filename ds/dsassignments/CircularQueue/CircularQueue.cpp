@@ -7,6 +7,7 @@ class queue {
 	int rear;
 	int front;
 	int size;
+	int count = 0;
 public:
 	queue()
 	{
@@ -14,6 +15,7 @@ public:
 		rear = -1;
 		front = -1;
 		size = 0;
+		count = 0;
 	}
 	void insert(int n);
 	void del();
@@ -35,11 +37,13 @@ void queue::insert(int n)
 {
 	if (!overflow())
 	{
-		ptr[++rear] = n;
-		if (rear == 0)
+		rear = (rear + 1) % size;
+		ptr[rear] = n;
+		if (rear == 0 && count == 0)
 		{
-			front++;
+			front = (front + 1) % size;
 		}
+		count++;
 	}
 	else
 	{
@@ -51,35 +55,35 @@ void queue::del()
 	if (!underflow())
 	{
 		cout << "deleted element is: ";
-		cout << (ptr[front++]) << endl;
-	}
-	if (rear == front)
-	{
-		rear = front = -1;
+		cout << (ptr[front]) << endl;
+		front = (front + 1) % size;
+		count--;
 	}
 	else
 		cout << "queue is empty" << endl;
 }
 bool queue::underflow()
 {
-	return(front==size);
+	return(count==0);
 }
 bool queue::overflow()
 {
-	return(rear == size - 1);
+	return(count==size);
 }
 void queue::display()
 {
-	for (int i = front; i <= rear; i++)
+	int i = 0;
+	for (i = front; i !=rear; i=(i+1)%size)
 	{
 		cout << ptr[i] << " ";
 	}
+	cout << ptr[i];
 	cout << endl;
 }
 int main()
 {
 	queue q1;
-	int n = 0,x=0,p=0;
+	int n = 0, x = 0, p = 0;
 	cout << "enter size of queue : ";
 	cin >> n;
 	q1.getsize(n);

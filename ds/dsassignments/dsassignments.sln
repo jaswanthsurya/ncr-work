@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "postfixevaluation", "postfi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinearQueue", "LinearQueue\LinearQueue.vcxproj", "{BAED0F3A-3BB5-4BA9-93E6-6295FA2FECD9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CircularQueue", "CircularQueue\CircularQueue.vcxproj", "{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{BAED0F3A-3BB5-4BA9-93E6-6295FA2FECD9}.Release|x64.Build.0 = Release|x64
 		{BAED0F3A-3BB5-4BA9-93E6-6295FA2FECD9}.Release|x86.ActiveCfg = Release|Win32
 		{BAED0F3A-3BB5-4BA9-93E6-6295FA2FECD9}.Release|x86.Build.0 = Release|Win32
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Debug|x64.ActiveCfg = Debug|x64
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Debug|x64.Build.0 = Debug|x64
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Debug|x86.ActiveCfg = Debug|Win32
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Debug|x86.Build.0 = Debug|Win32
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Release|x64.ActiveCfg = Release|x64
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Release|x64.Build.0 = Release|x64
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Release|x86.ActiveCfg = Release|Win32
+		{1CB4E2BC-4B0F-468F-89C1-2E6022E70FA6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
