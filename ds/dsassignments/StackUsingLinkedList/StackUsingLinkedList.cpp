@@ -57,18 +57,25 @@ int list::DeleteAtFirst()
 {
 	struct node *temp;
 	int x = -1;
-	if (start->next == NULL)
+	if (start != NULL)
 	{
-		x = start->data;
-		delete(start);
-		start = NULL;
+		if (start->next == NULL)
+		{
+			x = start->data;
+			delete(start);
+			start = NULL;
+		}
+		else
+		{
+			temp = start;
+			start = temp->next;
+			x = temp->data;
+			delete(temp);
+		}
 	}
 	else
 	{
-		temp = start;
-		start = temp->next;
-		x = temp->data;
-		delete(temp);
+		cout << "stack is empty" << endl;
 	}
 	return x;
 }
@@ -90,7 +97,8 @@ int main()
 			l.InsertAtFirst(x);
 			break;
 		case 2:d = l.DeleteAtFirst();
-			cout << "deleted : " << d << endl;
+			if(d!=-1)
+				cout << "deleted : " << d << endl;
 			break;
 		case 3:l.TravelForward();
 			break;
