@@ -4,7 +4,7 @@ using namespace std;;
 
 int main()
 {
-	int n = 0,i=0,j=0,temp=0;
+	int n = 0,i=0,j=0,temp=0,flag=0;
 	int *a;
 	cout << "enter size of array : ";
 	cin >> n;
@@ -23,7 +23,12 @@ int main()
 				temp = a[j + 1];
 				a[j + 1] = a[j];
 				a[j] = temp;
+				flag = 1;
 			}
+		}
+		if (!flag)
+		{
+			break;
 		}
 	}
 	cout << "the sorted array is: ";
