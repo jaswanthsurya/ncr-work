@@ -26,7 +26,7 @@ int main()
 		sum = sum + a;
 		i++;
 	}
-	avg = (sum/i);
+	avg = (sum/(i*1.0));
 	printf("number of positive values entered  : %ld \n minimum value : %ld \n maximum value: %ld \n average: %lf \n", i, min, max, avg);
 	return 0;
 }

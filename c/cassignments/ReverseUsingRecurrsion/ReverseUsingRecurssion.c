@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 #include<string.h>
-char *recurstr(char *);
+char *recurstr(char *,char *);
 char temp = 0;
 int main()
 {
