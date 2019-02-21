@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SelfAdjustingLinkedList", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QueueUsingLinkedList", "QueueUsingLinkedList\QueueUsingLinkedList.vcxproj", "{461AC4BB-A1E9-494A-98A3-A03E570E86CF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deque", "Deque\Deque.vcxproj", "{8003257D-A003-4858-A91C-E8C4F4FDF13E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,6 +153,14 @@ Global
 		{461AC4BB-A1E9-494A-98A3-A03E570E86CF}.Release|x64.Build.0 = Release|x64
 		{461AC4BB-A1E9-494A-98A3-A03E570E86CF}.Release|x86.ActiveCfg = Release|Win32
 		{461AC4BB-A1E9-494A-98A3-A03E570E86CF}.Release|x86.Build.0 = Release|Win32
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Debug|x64.ActiveCfg = Debug|x64
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Debug|x64.Build.0 = Debug|x64
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Debug|x86.ActiveCfg = Debug|Win32
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Debug|x86.Build.0 = Debug|Win32
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Release|x64.ActiveCfg = Release|x64
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Release|x64.Build.0 = Release|x64
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Release|x86.ActiveCfg = Release|Win32
+		{8003257D-A003-4858-A91C-E8C4F4FDF13E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
