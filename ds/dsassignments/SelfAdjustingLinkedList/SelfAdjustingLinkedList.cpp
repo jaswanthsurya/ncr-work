@@ -11,7 +11,7 @@ struct node
 class list {
 	struct node *start;
 public:
-	list()
+	list()//default contructor to initialise variables when an object is created
 	{
 		start = NULL;
 	}
@@ -19,7 +19,7 @@ public:
 	void InsertAtLast(int n);
 	void TravelForward();
 	void SelfAdjust(int n);
-	~list()
+	~list()//deallocate the assigned memory by deleting node to node to avoid memory leak
 	{
 		struct node *temp;
 		while (start != NULL)
@@ -32,7 +32,7 @@ public:
 };
 
 
-void list::InsertAtLast(int n)
+void list::InsertAtLast(int n)//inserting elements at last considering the case when the list is empty too
 {
 	struct node *temp, *curr;
 	temp = new node;
@@ -67,7 +67,7 @@ void list::TravelForward()
 	cout << endl;
 }
 
-void list::SelfAdjust(int n)
+void list::SelfAdjust(int n)//self adjust is used to find the position of element with the given value and then readdressing the element to first in the linked list
 {
 	struct node *temp,*temp1;
 	temp = start;
@@ -103,7 +103,7 @@ int main()
 		cin >> n;
 		switch (n)
 		{
-		case 1:cout << "enter element to insert : ";
+		case 1:cout << "enter integer element to insert : ";
 			cin >> d;
 			l.InsertAtLast(d);
 			break;
@@ -114,6 +114,8 @@ int main()
 			l.SelfAdjust(d);
 			break;
 		case 4:return 0;
+			break;
+		default:cout << "enter correct option to proceed" << endl;
 		}
 		cout << endl;
 	}

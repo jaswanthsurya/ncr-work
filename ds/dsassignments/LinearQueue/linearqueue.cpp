@@ -8,7 +8,7 @@ class queue {
 	int front;
 	int size;
 public:
-	queue()
+	queue()//default contructor to initialise the variables when object is created
 	{
 		ptr = NULL;
 		rear = -1;
@@ -21,19 +21,19 @@ public:
 	bool overflow();
 	void getsize(int n);
 	void display();
-	~queue()
+	~queue()//deallocate the assigned memory to avoid memory leak
 	{
 		delete(ptr);
 	}
 };
-void queue::getsize(int n)
+void queue::getsize(int n)//function to allocate the memory required
 {
 	ptr = new int[n];
 	size = n;
 }
 void queue::insert(int n)
 {
-	if (!overflow())
+	if (!overflow())//checking for overflow condition to prevent index going out of bounds
 	{
 		ptr[++rear] = n;
 		if (rear == 0)
@@ -48,12 +48,12 @@ void queue::insert(int n)
 }
 void queue::del()
 {
-	if (!underflow())
+	if (!underflow())//checking for underflow condition to avoid index going out of bounds condition
 	{
 		cout << "deleted element is: ";
 		cout << (ptr[front++]) << endl;
 	}
-	if (rear == front)
+	if (rear == front)//reinitialising the index pointers to -1 when the last element in queue is deleted
 	{
 		rear = front = -1;
 	}
@@ -99,6 +99,8 @@ int main()
 		case 3:q1.display();
 			break;
 		case 4:return 0;
+			break;
+		default:cout << "enter correct choice" << endl;
 		}
 	}
 }

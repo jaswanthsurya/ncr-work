@@ -1,3 +1,5 @@
+
+
 #include<iostream>
 
 using namespace std;;
@@ -23,10 +25,10 @@ int main()
 				temp = a[j + 1];
 				a[j + 1] = a[j];
 				a[j] = temp;
-				flag = 1;
+				flag = 1;//to optimize the code
 			}
 		}
-		if (!flag)
+		if (!flag)//when no swaps are performed it means the array is sorted and no need to perform additional loops
 		{
 			break;
 		}
@@ -36,4 +38,5 @@ int main()
 	{
 		cout<< a[i]<<" ";
 	}
+	delete(a);
 }

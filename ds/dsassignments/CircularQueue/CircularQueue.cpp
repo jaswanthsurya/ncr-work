@@ -9,7 +9,7 @@ class queue {
 	int size;
 	int count = 0;
 public:
-	queue()
+	queue()//default constuctor
 	{
 		ptr = NULL;
 		rear = -1;
@@ -23,19 +23,19 @@ public:
 	bool overflow();
 	void getsize(int n);
 	void display();
-	~queue()
+	~queue()//deallocation using destructor
 	{
 		delete(ptr);
 	}
 };
-void queue::getsize(int n)
+void queue::getsize(int n)//to allocate memory with mentioned size
 {
 	ptr = new int[n];
 	size = n;
 }
 void queue::insert(int n)
 {
-	if (!overflow())
+	if (!overflow())//checking for oveflow condition when inserting so that index does not move out of bounds
 	{
 		rear = (rear + 1) % size;
 		ptr[rear] = n;
@@ -52,7 +52,7 @@ void queue::insert(int n)
 }
 void queue::del()
 {
-	if (!underflow())
+	if (!underflow())//checking for underflow to avoid index out of bounds case
 	{
 		cout << "deleted element is: ";
 		cout << (ptr[front]) << endl;
@@ -84,7 +84,7 @@ int main()
 {
 	queue q1;
 	int n = 0, x = 0, p = 0;
-	cout << "enter size of queue : ";
+	cout << "enter size of queue in numbers : ";
 	cin >> n;
 	q1.getsize(n);
 	while (1)
@@ -103,6 +103,8 @@ int main()
 		case 3:q1.display();
 			break;
 		case 4:return 0;
+			break;
+		default:cout<<"enter correct choice to proceed";
 		}
 	}
 }

@@ -22,7 +22,7 @@ int main()
 			if (a[j] < min)
 			{
 				min = a[j];
-				k = j;
+				k = j;//k is a pointer pointing the array at the element that is minimum in the array
 			}
 		}
 		temp = a[k];
@@ -34,4 +34,5 @@ int main()
 	{
 		cout << a[i] << " ";
 	}
+	delete(a);
 }

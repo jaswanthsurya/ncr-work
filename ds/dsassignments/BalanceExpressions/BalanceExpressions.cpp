@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 
-struct stack
+struct stack//structure to define all the variables in stack
 {
 	int top;
 	char *sptr;
@@ -12,7 +12,7 @@ struct stack
 class Stack {
 	stack s;
 public:
-	Stack()
+	Stack()//default constructor
 	{
 		s.top = -1;
 		s.sptr = NULL;
@@ -24,7 +24,7 @@ public:
 	bool isempty();
 	bool isfull();
 	void getsize(int n);
-	~Stack()
+	~Stack()//deallocating the assigned memory to avoid memory leak
 	{
 		delete(s.sptr);
 	}
@@ -32,7 +32,7 @@ public:
 
 void Stack::push(char n)
 {
-	if (!isfull())
+	if (!isfull())//checking for overflow while pushing element into stack
 	{
 		s.sptr[++s.top] = n;
 	}
@@ -44,7 +44,7 @@ void Stack::push(char n)
 char Stack::pop()
 {
 	char x = '0';
-	if (!isempty())
+	if (!isempty())//check for underflow when popping elements 
 	{
 		x = s.sptr[s.top--];
 	}
@@ -54,7 +54,7 @@ char Stack::pop()
 	}
 	return x;
 }
-char Stack::peek()
+char Stack::peek()//function to just observe the top element of stack but not pop it
 {
 	char x = '0';
 	if (!isempty())
@@ -69,11 +69,11 @@ char Stack::peek()
 }
 bool Stack::isempty()
 {
-	return(s.top == -1);
+	return(s.top == -1);//underflow condition
 }
 bool Stack::isfull()
 {
-	return(s.top == s.size - 1);
+	return(s.top == s.size - 1);//overflow condition
 }
 void Stack::getsize(int n)
 {
@@ -88,7 +88,7 @@ int main()
 	Stack s1;
 	int i = 0, count = 0;
 	getline(cin, str);
-	for (count = 0; str[count]!='\0'; count++);
+	for (count = 0; str[count]!='\0'; count++);//finding the length of string
 	s1.getsize(count);
 	for (i = 0; i < count; i++)
 	{

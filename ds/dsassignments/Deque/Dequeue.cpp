@@ -8,7 +8,7 @@ class queue {
 	int front;
 	int size;
 public:
-	queue()
+	queue()//default constructor called using creation of object
 	{
 		ptr = NULL;
 		rear = -1;
@@ -23,23 +23,23 @@ public:
 	bool overflow();
 	void getsize(int n);
 	void display();
-	~queue()
+	~queue()//deallocation of assigned memory
 	{
 		delete(ptr);
 	}
 };
-void queue::getsize(int n)
+void queue::getsize(int n)//function to assign the size to the mentioned value
 {
 	ptr = new int[n];
 	size = n;
 }
 void queue::insertLast(int n)
 {
-	if (rear == -1 && front == -1)
+	if (rear == -1 && front == -1)//front should be incremented initially during first insertion as it is assigned with -1
 	{
 		front++;
 	}
-	if (!overflow())
+	if (!overflow())//checking for overflow condition while inserting into queue to avoid index out of bounds case
 	{
 		ptr[++rear] = n;
 	}
@@ -50,13 +50,13 @@ void queue::insertLast(int n)
 }
 void queue::insertFirst(int n)
 {
-	if (front > 0)
+	if (front > 0)//inserting at first can happen only if we have empty space at first
 	{
-		if (rear == -1 && front == -1)
+		if (rear == -1 && front == -1)//front should be incremented initially during first insertion as it is assigned with -1
 		{
 			front++;
 		}
-		if (!overflow())
+		if (!overflow()) // checking for overflow condition while inserting into queue to avoid index out of bounds case
 		{
 			ptr[--front] = n;
 		}
@@ -68,9 +68,9 @@ void queue::insertFirst(int n)
 }
 void queue::delFirst()
 {
-	if (!underflow())
+	if (!underflow())//checking for underflow to avoid index out of bounds case
 	{
-		if (rear == front)
+		if (rear == front)//when rear and front are pointing to same element it means there is only one element left so rear and front need to be initialised to originals
 		{
 			cout << "deleted element is: ";
 			cout << (ptr[front++]) << endl;
@@ -88,9 +88,9 @@ void queue::delFirst()
 }
 void queue::delLast()
 {
-	if (!underflow())
+	if (!underflow())//checking for underflow to avoid index out of bounds case
 	{
-		if (rear == front)
+		if (rear == front)//when rear and front are pointing to same element it means there is only one element left so rear and front need to be initialised to originals
 		{
 			cout << "deleted element is: ";
 			cout << (ptr[rear--]) << endl;
@@ -116,8 +116,7 @@ bool queue::overflow()
 }
 void queue::display()
 {
-	cout << front << endl << rear << endl;
-	for (int i = front; i <= rear; i++)
+	for (int i = front; i <= rear; i++)//printing elements between rear and front
 	{
 		cout << ptr[i] << " ";
 	}
@@ -127,7 +126,7 @@ int main()
 {
 	queue q1;
 	int n = 0, x = 0, p = 0;
-	cout << "enter size of queue : ";
+	cout << "enter size of queue in numbers : ";
 	cin >> n;
 	q1.getsize(n);
 	while (1)
@@ -152,6 +151,8 @@ int main()
 		case 5:q1.display();
 			break;
 		case 6:return 0;
+			break;
+		default:cout<<"enter correct choice to proceed";
 		}
 	}
 }

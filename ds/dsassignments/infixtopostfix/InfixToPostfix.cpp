@@ -12,7 +12,7 @@ struct stack
 class Stack {
 	stack s;
 public:
-	Stack()
+	Stack()//default constructor to initialise variables
 	{
 		s.top = -1;
 		s.sptr = NULL;
@@ -25,7 +25,7 @@ public:
 	bool isfull();
 	void getsize(int n);
 	int checkprec(char c);
-	~Stack()
+	~Stack()//destructor to deallocate the assigned memory
 	{
 		delete(s.sptr);
 	}
@@ -33,7 +33,7 @@ public:
 
 void Stack::push(char n)
 {
-	if (!isfull())
+	if (!isfull())//checking or overflow condition to avoid index going out of bounds
 	{
 		s.sptr[++s.top] = n;
 	}
@@ -45,7 +45,7 @@ void Stack::push(char n)
 char Stack::pop()
 {
 	char x = '0';
-	if (!isempty())
+	if (!isempty())//checking or underflow condition to avoid index going out of bounds
 	{
 		x = s.sptr[s.top--];
 	}
@@ -55,7 +55,7 @@ char Stack::pop()
 	}
 	return x;
 }
-char Stack::peek()
+char Stack::peek()//function to get the top most element of stack without popping it
 {
 	char x = '0';
 	if (!isempty())
@@ -76,12 +76,12 @@ bool Stack::isfull()
 {
 	return(s.top == s.size - 1);
 }
-void Stack::getsize(int n)
+void Stack::getsize(int n)//initialise stack with given size and allocating memory
 {
 	s.sptr = new char[n];
 	s.size = n;
 }
-int Stack::checkprec(char c)
+int Stack::checkprec(char c)//function to retrive precedence value of elements in the stack to check for any violation that can happen
 {
 	int x = 0;
 	if (!isempty())
@@ -115,22 +115,22 @@ int main()
 	char ostr[100];
 	int i = 0,j=0,x=0, count = 0;
 	getline(cin, str);
-	for (count = 0; str[count] != '\0'; count++);
+	for (count = 0; str[count] != '\0'; count++);//cal the length of the given expression
 	s1.getsize(count);
 	for (i = 0; i < count; i++)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')//append the character value to output string if the character in input string is a alphabet
 		{
 			ostr[j] = str[i];
 			j++;
 		}
 		else
 		{
-			if (str[i] == '('||str[i]=='[')
+			if (str[i] == '('||str[i]=='[')//if an open paranthesis is encountered blindly push it 
 			{
 				s1.push(str[i]);
 			}
-			else if (str[i] == '*' || str[i] == '/' || str[i] == '+' || str[i] == '-')
+			else if (str[i] == '*' || str[i] == '/' || str[i] == '+' || str[i] == '-')//when an operator is overcomed check for precedence and push and pop according to cases
 			{
 				if (s1.checkprec(str[i]) > 0)
 				{
@@ -146,7 +146,7 @@ int main()
 					s1.push(str[i]);
 				}
 			}
-			else if (str[i] == ')')
+			else if (str[i] == ')')//when a close paranthesis is encountered pop elements until open bracket is encountered
 			{
 				while (temp != '(')
 				{
@@ -168,12 +168,12 @@ int main()
 			}
 		}
 	}
-	while (!s1.isempty())
+	while (!s1.isempty())//popping out elements at the last if any
 	{
 		ostr[j] = s1.pop();
 		j++;
 	}
-	ostr[j] = '\0';
+	ostr[j] = '\0';//appending null character at the end 
 	j++;
 	for (i = 0; i < j; i++)
 	{

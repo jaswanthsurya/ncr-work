@@ -3,7 +3,7 @@
 
 using namespace std;
 
-struct node
+struct node//struture definning the type of linked list elements
 {
 	int data;
 	struct node* next;
@@ -12,7 +12,7 @@ struct node
 class list {
 	struct node *start;
 public:
-	list()
+	list()//default constructor to initialise variables when object is called
 	{
 		start = NULL;
 	}
@@ -26,7 +26,7 @@ public:
 	void TravelBackward();
 	void Reverse();
 	void recurr1(struct node *temp);
-	~list()
+	~list()//deallocating assigned memory by travelling from node to node to avoid memory leak
 	{
 		struct node *temp;
 		while (start != NULL)
@@ -37,7 +37,7 @@ public:
 		}
 	}
 };
-void list::InsertAtFirst(int n)
+void list::InsertAtFirst(int n)//inseting at first to the linked list
 {
 	struct node *temp;
 	temp = new node;
@@ -50,7 +50,7 @@ void list::InsertAtLast(int n)
 {
 	struct node *temp,*curr;
 	temp = new node;
-	if (start == NULL)
+	if (start == NULL)//case for inserting at last when there are no elements in the list
 	{
 		temp->data = n;
 		temp->next = NULL;
@@ -67,11 +67,11 @@ void list::InsertAtLast(int n)
 	}
 }
 
-void list::InsertAtPos(int ele, int n)
+void list::InsertAtPos(int ele, int n)//inserting element at a data position specified
 {
 	struct node *temp, *curr;
 	temp = new node;
-	if (start->data == ele)
+	if (start->data == ele)//case when the element is at first
 	{
 		temp->data = n;
 		temp->next = start;
@@ -95,14 +95,14 @@ void list::InsertAtPos(int ele, int n)
 	}
 }
 
-int list::DeleteAtFirst()
+int list::DeleteAtFirst()//deleting element at first
 {
 	struct node *temp;
 	int x = -1;
-	if (start->next == NULL)
+	if (start->next == NULL)//when deleting the last element
 	{
 		x = start->data;
-		delete(start);
+		delete(start);//deallocating the respective node
 		start = NULL;
 	}
 	else
@@ -110,7 +110,7 @@ int list::DeleteAtFirst()
 		temp = start;
 		start = temp->next;
 		x = temp->data;
-		delete(temp);
+		delete(temp);//deallocating the respective node
 	}
 	return x;
 }
@@ -119,10 +119,10 @@ int list::DeleteAtLast()
 {
 	struct node *curr;
 	int x = -1;
-	if (start->next == NULL)
+	if (start->next == NULL)//deleeting the last element 
 	{
 		x = start->data;
-		delete(start);
+		delete(start);//deallocating the respective node
 		start = NULL;
 	}
 	else
@@ -131,17 +131,17 @@ int list::DeleteAtLast()
 		while (curr->next->next!= NULL)
 			curr = curr->next;
 		x = curr->next->data;
-		delete(curr->next);
+		delete(curr->next);//deallocating the respective node
 		curr->next = NULL;
 	}
 	return x;
 }
 
-int list::DeleteAtPos(int ele)
+int list::DeleteAtPos(int ele)//delete element at certain position
 {
 	struct node *curr=NULL,*temp=NULL;
 	int x = -1;
-	if (start->data == ele)
+	if (start->data == ele)//case when the position of element is at first
 	{
 		x = start->data;
 		curr = start;
@@ -150,9 +150,9 @@ int list::DeleteAtPos(int ele)
 	}
 	else
 	{
-		while (curr != NULL && curr->next->data == ele)
+		while (curr != NULL && curr->next->data == ele)//traversing until element is found or list is completed
 			curr = curr->next;
-		if (curr != NULL)
+		if (curr != NULL)//if the end is not reached
 		{
 			temp = curr->next;
 			curr->next = curr->next->next;
@@ -167,7 +167,7 @@ int list::DeleteAtPos(int ele)
 	return x;
 }
 
-void list::TravelForward()
+void list::TravelForward()//print data of linked list node by node
 {
 	struct node *temp;
 	temp = start;
@@ -179,7 +179,7 @@ void list::TravelForward()
 	cout << endl;
 }
 
-void list::TravelBackward()
+void list::TravelBackward()//travelling backward in linked list using recurssion
 {
 	recurr1(start);
 	cout << endl;
@@ -187,7 +187,7 @@ void list::TravelBackward()
 
 void list::recurr1(struct node *temp)
 {
-	if (temp == NULL)
+	if (temp == NULL)//base condition to terminate the recurrsive calls
 		return;
 	else
 	{
@@ -196,7 +196,7 @@ void list::recurr1(struct node *temp)
 	}
 }
 
-void list::Reverse()
+void list::Reverse()//reversing the linked list
 {
 	struct node *rev=NULL, *temp;
 	if (start != NULL)
@@ -228,15 +228,15 @@ int main()
 		cout << endl;
 		switch (n)
 		{
-		case 1:cout << "enter element: ";
+		case 1:cout << "enter integer element: ";
 			cin >> x;
 			l.InsertAtFirst(x);
 			break;
-		case 2:cout << "enter element: ";
+		case 2:cout << "enter integer element: ";
 			cin >> x;
 			l.InsertAtLast(x);
 			break;
-		case 3:cout << "enter element: ";
+		case 3:cout << "enter integer element: ";
 			cin >> x;
 			cout << "enter the element position";
 			cin >> p;
@@ -248,7 +248,7 @@ int main()
 		case 5:d = l.DeleteAtLast();
 			cout << "deleted : " << d<<endl;
 			break;
-		case 6:cout << "enter the position to be deleted :";
+		case 6:cout << "enter the element at position to be deleted :";
 			cin >> p;
 			d = l.DeleteAtPos(p);
 			cout << "deleted :" << d<<endl;
@@ -260,6 +260,8 @@ int main()
 		case 9:l.Reverse();
 			break;
 		case 0:return 0;
+			break;
+		default:cout << "enter correct choice to proceed" << endl;
 		}
 		cout << endl;
 		cout << endl;

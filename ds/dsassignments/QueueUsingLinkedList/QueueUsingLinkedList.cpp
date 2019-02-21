@@ -11,14 +11,14 @@ struct node
 class list {
 	struct node *start;
 public:
-	list()
+	list()//default constructor to initialise variables when object is created
 	{
 		start = NULL;
 	}
 	void InsertAtLast(int n);
 	int DeleteAtFirst();
 	void TravelForward();
-	~list()
+	~list()//destructor to deallocate memory node by node to avoid memory leak
 	{
 		struct node *temp;
 		while (start != NULL)
@@ -30,11 +30,11 @@ public:
 	}
 };
 
-void list::InsertAtLast(int n)
+void list::InsertAtLast(int n)//inserting at last in the list
 {
 	struct node *temp, *curr;
 	temp = new node;
-	if (start == NULL)
+	if (start == NULL)//inserting the first eleement in the list
 	{
 		temp->data = n;
 		temp->next = NULL;
@@ -53,15 +53,15 @@ void list::InsertAtLast(int n)
 
 
 
-int list::DeleteAtFirst()
+int list::DeleteAtFirst()//deleting from front as per queue principal
 {
 	struct node *temp;
 	int x = -1;
-	if (start == NULL)
+	if (start == NULL)//returning when there are no elements
 	{
 		return -1;
 	}
-	else if (start->next == NULL)
+	else if (start->next == NULL)//deleting when only one element is left
 	{
 		x = start->data;
 		delete(start);
@@ -78,7 +78,7 @@ int list::DeleteAtFirst()
 }
 
 
-void list::TravelForward()
+void list::TravelForward()//display elements in the queue
 {
 	struct node *temp;
 	temp = start;
@@ -115,6 +115,8 @@ int main()
 		case 3:l.TravelForward();
 			break;
 		case 4:return 0;
+			break;
+		default:cout << "enter correct choice to proceed"<<endl;
 		}
 		cout << endl;
 		cout << endl;

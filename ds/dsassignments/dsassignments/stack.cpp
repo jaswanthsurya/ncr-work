@@ -12,7 +12,7 @@ struct stack
 class Stack {
 	stack s;
 public:
-	Stack()
+	Stack()//default constructor to initialise variables
 	{
 		s.top = -1;
 		s.sptr = NULL;
@@ -25,7 +25,7 @@ public:
 	bool isfull();
 	void getsize(int n);
 	void display();
-	~Stack()
+	~Stack()//deallocating the assigned memory
 	{
 		delete(s.sptr);
 	}
@@ -33,7 +33,7 @@ public:
 
 void Stack::push(int n)
 {
-	if (!isfull())
+	if (!isfull())//checking for overflow condition to avoid index going out of bounds
 	{
 		s.sptr[++s.top] = n;
 	}
@@ -45,7 +45,7 @@ void Stack::push(int n)
 int Stack::pop()
 {
 	int x = -999;
-	if (!isempty())
+	if (!isempty())//checking for underflow to avoid index going out of bounds
 	{
 		x = s.sptr[s.top--];
 	}
@@ -55,7 +55,7 @@ int Stack::pop()
 	}
 	return x;
 }
-int Stack::peek()
+int Stack::peek()//function used to just get the top of stack without popping elements of stack
 {
 	int x=-999;
 	if (!isempty())
@@ -76,7 +76,7 @@ bool Stack::isfull()
 {
 	return(s.top == s.size - 1);
 }
-void Stack::getsize(int n)
+void Stack::getsize(int n)//initialising stack with size given
 {
 	s.sptr = new int[n];
 	s.size = n;
@@ -109,7 +109,7 @@ int main()
 		cin >> x;
 		switch (x)
 		{
-		case 1:cout << "enter the number :";
+		case 1:cout << "enter integer number :";
 			cin >> x1;
 			s1.push(x1);
 			break;

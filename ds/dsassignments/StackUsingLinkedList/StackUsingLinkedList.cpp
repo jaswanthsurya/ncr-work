@@ -12,14 +12,14 @@ struct node
 class list {
 	struct node *start;
 public:
-	list()
+	list()//default constructor to initialise varibles when an object is created
 	{
 		start = NULL;
 	}
 	void InsertAtFirst(int n);
 	int DeleteAtFirst();
 	void TravelForward();
-	~list()
+	~list()//destructor to deallocate the assigned memory to avoid memory leak
 	{
 		struct node *temp;
 		while (start != NULL)
@@ -30,7 +30,7 @@ public:
 		}
 	}
 };
-void list::InsertAtFirst(int n)
+void list::InsertAtFirst(int n)//inserting elements at first since in stack operation elements are inserted at the top always
 {
 	struct node *temp;
 	temp = new node;
@@ -41,7 +41,7 @@ void list::InsertAtFirst(int n)
 
 
 
-void list::TravelForward()
+void list::TravelForward()//print the elemts in the stack
 {
 	struct node *temp;
 	temp = start;
@@ -53,19 +53,19 @@ void list::TravelForward()
 	cout << endl;
 }
 
-int list::DeleteAtFirst()
+int list::DeleteAtFirst()//pop function to pop the top most element of the stack which is the first element in the linked list
 {
 	struct node *temp;
 	int x = -1;
 	if (start != NULL)
 	{
-		if (start->next == NULL)
+		if (start->next == NULL)//case for deleting the last element
 		{
 			x = start->data;
 			delete(start);
 			start = NULL;
 		}
-		else
+		else//case when multiple elements are present
 		{
 			temp = start;
 			start = temp->next;
@@ -92,7 +92,7 @@ int main()
 		cout << endl;
 		switch (n)
 		{
-		case 1:cout << "enter element: ";
+		case 1:cout << "enter integer element: ";
 			cin >> x;
 			l.InsertAtFirst(x);
 			break;
@@ -103,6 +103,8 @@ int main()
 		case 3:l.TravelForward();
 			break;
 		case 0:return 0;
+			break;
+		default:cout << "enter correct choice to proceed" << endl;
 		}
 		cout << endl;
 		cout << endl;

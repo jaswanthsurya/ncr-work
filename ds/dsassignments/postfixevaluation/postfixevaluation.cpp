@@ -12,7 +12,7 @@ struct stack
 class Stack {
 	stack s;
 public:
-	Stack()
+	Stack()//deafult constructor to initialise the variables when object is created
 	{
 		s.top = -1;
 		s.sptr = NULL;
@@ -25,13 +25,13 @@ public:
 	bool isfull();
 	void getsize(int n);
 	int checktop();
-	~Stack()
+	~Stack()//deallocating the assigned memory 
 	{
 		delete(s.sptr);
 	}
 };
 
-void Stack::push(int n)
+void Stack::push(int n)//pushing elements into stack and checking overflow condition is met to avoid index going out of bounds
 {
 	if (!isfull())
 	{
@@ -42,7 +42,7 @@ void Stack::push(int n)
 		cout << "stack is full" << endl;
 	}
 }
-int Stack::pop()
+int Stack::pop()//popping elements from stack and checking for underflow condition to avoid index going out of bounds
 {
 	int x = -999;
 	if (!isempty())
@@ -55,7 +55,7 @@ int Stack::pop()
 	}
 	return x;
 }
-int Stack::peek()
+int Stack::peek()//function to get the topmost element of stack without popping it
 {
 	int x = -999;
 	if (!isempty())
@@ -76,7 +76,7 @@ bool Stack::isfull()
 {
 	return(s.top == s.size - 1);
 }
-void Stack::getsize(int n)
+void Stack::getsize(int n)//allocate the stack with given memory
 {
 	s.sptr = new int[n];
 	s.size = n;
@@ -102,11 +102,11 @@ int main()
 	for (i = 0; i < count; i++)
 	{
 		x = str[i] - '0';
-		if (x >= 0 && x <= 9)
+		if (x >= 0 && x <= 9)//push the operands into stack 
 		{
 			s1.push(x);
 		}
-		else
+		else//when an operator is identified pop two elements from the stack and perform respective operation and push the result
 		{
 			switch (str[i])
 			{
