@@ -57,8 +57,10 @@ void Poly::insert(int n, int p)
 
 void Poly::display()
 {
+	cout << endl << endl;
 	struct node *temp;
 	temp = start;
+	cout << "the added polynomial expression is" << endl << endl;
 	while (temp != NULL)//traverse until last node and print the data and power in each node
 	{
 		if (temp->next != NULL)
@@ -115,6 +117,18 @@ void PolyAdd(Poly &a, Poly &b)//function to add the two polynomials and store re
 				}
 			}
 		}
+		apointer = a.start;
+		while (apointer->next != NULL)
+		{
+			apointer = apointer->next;
+		}
+		while (bpointer != NULL)
+		{
+			apointer->next = bpointer;
+			bpointer = bpointer->next;
+			apointer = apointer->next;
+		}
+		apointer->next = NULL;
 	}
 	else
 	{
