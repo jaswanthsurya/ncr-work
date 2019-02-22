@@ -26,7 +26,7 @@ public:
 		{
 			temp = start;
 			start = temp->next;
-			//delete(temp);
+			delete(temp);
 		}
 	}
 };
