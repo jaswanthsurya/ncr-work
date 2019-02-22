@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deque", "Deque\Deque.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergingLinkedLists", "MergingLinkedLists\MergingLinkedLists.vcxproj", "{64555B30-1BF0-4F0C-B7A9-51503216BF50}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PolynomialAddition", "PolynomialAddition\PolynomialAddition.vcxproj", "{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{64555B30-1BF0-4F0C-B7A9-51503216BF50}.Release|x64.Build.0 = Release|x64
 		{64555B30-1BF0-4F0C-B7A9-51503216BF50}.Release|x86.ActiveCfg = Release|Win32
 		{64555B30-1BF0-4F0C-B7A9-51503216BF50}.Release|x86.Build.0 = Release|Win32
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Debug|x64.ActiveCfg = Debug|x64
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Debug|x64.Build.0 = Debug|x64
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Debug|x86.ActiveCfg = Debug|Win32
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Debug|x86.Build.0 = Debug|Win32
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Release|x64.ActiveCfg = Release|x64
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Release|x64.Build.0 = Release|x64
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Release|x86.ActiveCfg = Release|Win32
+		{FD61B1AF-61DB-48E7-84CE-D8E1E4A4EDA2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
