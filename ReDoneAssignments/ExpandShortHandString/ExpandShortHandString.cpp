@@ -3,6 +3,42 @@
 
 using namespace std;
 
+char * ExpandShortNotation(string Sen,int SenSize, int OSenSize)
+{
+	char *outp;//output character array pointer
+	outp = new char[OSenSize];//allocate the required memory necessary for the output character type by using the calculated size
+	int indicator = 0;
+	for (int counter = 0; counter < SenSize; counter++)
+	{
+		if (Sen[counter + 1] != '-'&&Sen[counter] != '-')//copy the content of string is the character are not neighbours of -
+		{
+			outp[indicator] = Sen[counter];
+			indicator++;
+		}
+		if (Sen[counter] == '-')//if an - is encountered add the characters that are present in between them
+		{
+			if ((Sen[counter + 1] - Sen[counter - 1]) > 0)//if the left hand character asci value is lesser than the ascii value  of the right hand character
+			{
+				outp[indicator++] = Sen[counter - 1];
+				for (int i = 0; i < (Sen[counter + 1] - Sen[counter - 1] - 1); i++)
+				{
+					outp[indicator++] = Sen[counter - 1] + i + 1;
+				}
+			}
+			else
+			{
+				outp[indicator++] = Sen[counter - 1];//if the left hand character asci value is greater than the ascii value  of the right hand character
+				for (int i = 0; i < (-Sen[counter + 1] +Sen[counter - 1] - 1); i++)
+				{
+					outp[indicator++] = Sen[counter - 1] -( i + 1);
+				}
+			}
+
+		}
+	}
+	return outp;
+}
+
 int main()
 {
 	cout << "-------------program to expand the short hand notation in the given string--------------------" << endl;
@@ -34,7 +70,7 @@ int main()
 	{
 		if (Sen[counter] == '-')
 		{
-			if (Sen[counter + 1] == '-' || Sen[counter - 1] > Sen[counter + 1])
+			if (Sen[counter + 1] == '-')
 			{
 				cout << "invalid sentence entered" << endl;
 				cout << "entered sentence is :";
@@ -48,31 +84,18 @@ int main()
 			}
 			else
 			{
-				OSenSize = OSenSize + (int)(Sen[counter + 1] - Sen[counter - 1]);//calculate the elements in between the characters present between -
+				if((Sen[counter + 1] - Sen[counter - 1])>0)
+					OSenSize = OSenSize + (int)(Sen[counter + 1] - Sen[counter - 1]);//calculate the elements between the characters present at the neighbour of -
+				else 
+					OSenSize = OSenSize + (int)(-1*(Sen[counter + 1] - Sen[counter - 1]));//calculate the elements in between the characters present between -
 				indicator++;//count of - present in the sentence
 			}
 		}
 	}
 	OSenSize = SenSize + OSenSize - (2 * indicator);//calculate the output size using the count of - present
-	char *outp;//output character array pointer
-	outp = new char[OSenSize];//allocate the required memory necessary for the output character type by using the calculated size
-	indicator = 0;
-	for (counter = 0; counter < SenSize; counter++)
-	{
-		if (Sen[counter + 1] != '-'&&Sen[counter] != '-')//copy the content of string is the character are not neighbours of -
-		{
-			outp[indicator] = Sen[counter];
-			indicator++;
-		}
-		if (Sen[counter] == '-')//if an - is encountered add the characters that are present in between them
-		{
-			outp[indicator++] = Sen[counter - 1];
-			for (int i = 0; i < (Sen[counter + 1] - Sen[counter - 1]-1); i++)
-			{
-				outp[indicator++] = Sen[counter-1] + i+1;
-			}
-		}
-	}
+	char *outp;
+	outp = new char[OSenSize];
+	outp = ExpandShortNotation(Sen, SenSize, OSenSize);//function for expanding the short hand notation in the given sentence
 	cout << "the expanded short hand notation of given string is: ";
 	for (counter = 0; counter < OSenSize; counter++)
 	{
