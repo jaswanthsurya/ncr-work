@@ -102,4 +102,5 @@ int main()
 		cout << outp[counter];
 	}
 	return 0;
+	delete(outp);
 }
