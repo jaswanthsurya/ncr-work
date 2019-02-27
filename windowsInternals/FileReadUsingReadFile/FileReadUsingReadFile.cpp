@@ -17,7 +17,7 @@ int _tmain(int argc,WCHAR *argv[],WCHAR* env[])
 		NULL);
 	if (CreateFileHandler == INVALID_HANDLE_VALUE)
 	{
-		cout << "handler initiation failed due to error code: " << GetLastError() << endl;
+		cout << "handler initiation failed due to error code: " << GetLastError() << endl;//get the error code when any error has occured in creating file handler
 		wcout << "failed to open file: " << argv[1] << endl;
 	}
 	else
