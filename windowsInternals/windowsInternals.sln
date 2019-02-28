@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreatingProcess", "Creating
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateProcessAndGetInfo", "CreateProcessAndGetInfo\CreateProcessAndGetInfo.vcxproj", "{06E21F38-7584-4F65-B602-8A6F3381F7C9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateEventApi", "CreateEventApi\CreateEventApi.vcxproj", "{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{06E21F38-7584-4F65-B602-8A6F3381F7C9}.Release|x64.Build.0 = Release|x64
 		{06E21F38-7584-4F65-B602-8A6F3381F7C9}.Release|x86.ActiveCfg = Release|Win32
 		{06E21F38-7584-4F65-B602-8A6F3381F7C9}.Release|x86.Build.0 = Release|Win32
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Debug|x64.ActiveCfg = Debug|x64
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Debug|x64.Build.0 = Debug|x64
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Debug|x86.ActiveCfg = Debug|Win32
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Debug|x86.Build.0 = Debug|Win32
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Release|x64.ActiveCfg = Release|x64
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Release|x64.Build.0 = Release|x64
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Release|x86.ActiveCfg = Release|Win32
+		{BC164883-37F9-40AB-B72F-BE9E7FCD2DBD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
