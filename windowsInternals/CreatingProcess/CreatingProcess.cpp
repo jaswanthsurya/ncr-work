@@ -30,7 +30,7 @@ int _tmain(int argc, WCHAR *argv[], WCHAR *env[])
 		cout << "creation of process failed due to error(" << ")" << GetLastError() << endl;
 	}
 	WaitForSingleObject(ProcessInfo.hProcess,INFINITE);//wait until child process exits
-	cout << "the process id is : " << ProcessInfo.dwProcessId << endl;//process if of the process opened present in the process information
+	cout << "the process id is : " << ProcessInfo.dwProcessId <<"the thread id is: "<<ProcessInfo.dwThreadId << endl;//process if of the process opened present in the process information
 	CloseHandle(ProcessInfo.hProcess);//close handles of process and thread
 	CloseHandle(ProcessInfo.hThread);
 
@@ -51,7 +51,7 @@ int _tmain(int argc, WCHAR *argv[], WCHAR *env[])
 		cout << "creation of process failed due to error(" << ")" << GetLastError() << endl;
 	}
 	WaitForSingleObject(ProcessInfo1.hProcess, INFINITE);//wait until child process exits
-	cout << "the process id is : " << ProcessInfo1.dwProcessId << endl;//process if of the process opened present in the process information
+	cout << "the process id is : " << ProcessInfo1.dwProcessId <<"the thread id is : "<<ProcessInfo1.dwThreadId<< endl;//process if of the process opened present in the process information
 	CloseHandle(ProcessInfo1.hProcess);//close handles of process and thread
 	CloseHandle(ProcessInfo1.hThread);
 	return 0;
