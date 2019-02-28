@@ -27,7 +27,7 @@ int _tmain(int argc,WCHAR *argv[],WCHAR *env[])//command line api provided by wi
 		BOOL Status = 0;//success status indicator
 		Status = WriteFile(CreateFileHandler,//file handler generated using create file api to access the file in read or write mode
 			OutBuffer,//out buffer containing the values to be written in the file
-			OutBufferLen,//length of the out buffer including the null character i.e. consider the length with null termination
+			sizeof(WCHAR)*OutBufferLen,//length of the out buffer including the null character i.e. consider the length with null termination
 			&NoOFBytesWritten,//output value of the function which returns the no of bytes written to the file
 			NULL);
 		if (Status == 0)//status 0 indicates writing to file failed
