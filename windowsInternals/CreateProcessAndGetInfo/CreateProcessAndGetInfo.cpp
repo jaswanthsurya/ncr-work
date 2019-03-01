@@ -11,9 +11,6 @@ int _tmain(int argc, WCHAR* argv[], WCHAR* env[])
 	ZeroMemory(&StartUpInfo, sizeof(StartUpInfo));
 	ZeroMemory(&ProcessInfo, sizeof(ProcessInfo));
 	StartUpInfo.cb = sizeof(StartUpInfo);
-	ZeroMemory(&StartUpInfo1, sizeof(StartUpInfo1));
-	ZeroMemory(&ProcessInfo1, sizeof(ProcessInfo1));
-	StartUpInfo1.cb = sizeof(StartUpInfo1);
 	BOOL Status = 0;
 	Status = CreateProcess(NULL,//null if the application name is not given using variable but using command line arguments
 		argv[1],//application name given as command line argument 
@@ -33,8 +30,8 @@ int _tmain(int argc, WCHAR* argv[], WCHAR* env[])
 	cout << "the process id of current process is : " << GetCurrentProcessId() << endl;
 	cout << "the thread id of current process is : " << GetCurrentThreadId() << endl;
 	cout << "the process id of current process is : " << GetProcessId(ProcessInfo.hProcess)<< endl;
-	cout << "the thread id of current process is : " << GetThreadId(ProcessInfo.hProcess) << endl;
-	cout << "the process id of current process is : " << GetProcessIdOfThread(ProcessInfo.hProcess) << endl;
+	cout << "the thread id of current process is : " << GetThreadId(ProcessInfo.hThread) << endl;
+	cout << "the process id of current process is : " << GetProcessIdOfThread(ProcessInfo.hThread) << endl;
 	CloseHandle(ProcessInfo.hProcess);//close handles of process and thread
 	CloseHandle(ProcessInfo.hThread);
 }
