@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChildProcessPriority1", "Ch
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CriticalSectionDemo", "CriticalSectionDemo\CriticalSectionDemo.vcxproj", "{7015EB4F-1195-42DF-85D4-7243A88F431A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadCreationAndExitUsingTerminateThread", "ThreadCreationAndExitUsingTerminateThread\ThreadCreationAndExitUsingTerminateThread.vcxproj", "{D01203CD-EEF1-4303-8110-F96AA14F299A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +213,14 @@ Global
 		{7015EB4F-1195-42DF-85D4-7243A88F431A}.Release|x64.Build.0 = Release|x64
 		{7015EB4F-1195-42DF-85D4-7243A88F431A}.Release|x86.ActiveCfg = Release|Win32
 		{7015EB4F-1195-42DF-85D4-7243A88F431A}.Release|x86.Build.0 = Release|Win32
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Debug|x64.ActiveCfg = Debug|x64
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Debug|x64.Build.0 = Debug|x64
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Debug|x86.ActiveCfg = Debug|Win32
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Debug|x86.Build.0 = Debug|Win32
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Release|x64.ActiveCfg = Release|x64
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Release|x64.Build.0 = Release|x64
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Release|x86.ActiveCfg = Release|Win32
+		{D01203CD-EEF1-4303-8110-F96AA14F299A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
