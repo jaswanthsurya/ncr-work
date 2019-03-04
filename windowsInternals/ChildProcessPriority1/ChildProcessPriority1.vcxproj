@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}</ProjectGuid>
+    <ProjectGuid>{4DE7BA82-EB26-417B-AD25-85AB57B26B35}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ChildProcessPriority</RootNamespace>
+    <RootNamespace>ChildProcessPriority1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,7 +154,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ChildProcessPriority.cpp" />
+    <ClCompile Include="ChildProcessPriority1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
