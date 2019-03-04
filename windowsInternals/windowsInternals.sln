@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InConsistentMethodDemon", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UsingInterLockedExchanged", "UsingInterLockedExchanged\UsingInterLockedExchanged.vcxproj", "{1036331A-5420-4F40-B2EE-87B31143FB0F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChildProcessPriority", "ChildProcessPriority\ChildProcessPriority.vcxproj", "{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{1036331A-5420-4F40-B2EE-87B31143FB0F}.Release|x64.Build.0 = Release|x64
 		{1036331A-5420-4F40-B2EE-87B31143FB0F}.Release|x86.ActiveCfg = Release|Win32
 		{1036331A-5420-4F40-B2EE-87B31143FB0F}.Release|x86.Build.0 = Release|Win32
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Debug|x64.ActiveCfg = Debug|x64
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Debug|x64.Build.0 = Debug|x64
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Debug|x86.ActiveCfg = Debug|Win32
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Debug|x86.Build.0 = Debug|Win32
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Release|x64.ActiveCfg = Release|x64
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Release|x64.Build.0 = Release|x64
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Release|x86.ActiveCfg = Release|Win32
+		{54A8D468-46C2-42F3-ADF8-71C6F87FFE27}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

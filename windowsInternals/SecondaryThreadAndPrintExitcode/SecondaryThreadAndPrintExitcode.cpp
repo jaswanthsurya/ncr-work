@@ -7,6 +7,7 @@ DWORD ExitCode;
 DWORD WINAPI ThreadFun(LPVOID Str)
 {
 	g_x++;
+	ExitThread(ExitCode);
 	return 0;
 }
 
@@ -25,15 +26,11 @@ int _tmain(int argc, WCHAR* argv[], WCHAR* env[])
 	{
 		cout << "creation of thread failed due to error (" << GetLastError() << ")" << endl;
 	}
-	WaitForSingleObject(CreateThreadHandle, 5000);//waits for 5 seconds if the thread is not signalled yet
-	if (!TerminateThread(CreateThreadHandle, ExitCode))
-	{
-		cout << "thread termination failed due to error (" << GetLastError() << ")" << endl;
-	}
 	if (!GetExitCodeThread(CreateThreadHandle, &ExitCode))//function that gives the exit code of the thread in the second parameter
 	{
 		cout << "exit thread failed due to error (" << GetLastError() << ")" << endl;
 	}
+	WaitForSingleObject(CreateThreadHandle, 5000);//waits for 5 seconds if the thread is not signalled yet
 	cout << "the exit code is : " << ExitCode << endl;
 	cout << "the value of g_x after executing thread is :" << g_x << endl;
 	CloseHandle(CreateThreadHandle);//closing the associated handle for the thread
