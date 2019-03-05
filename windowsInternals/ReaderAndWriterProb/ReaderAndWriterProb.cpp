@@ -14,15 +14,14 @@ DWORD WINAPI read(LPVOID Str)
 	if (Tqueue.empty())
 	{
 		SleepConditionVariableSRW(&QueueEmpty, &Rlock, INFINITE,0);
-		WakeConditionVariable(&QueueFull);
 	}
 	else
 	{
 		cout << "Reader consumed : " << Tqueue.front() << endl;
 		Tqueue.pop();
+		ReleaseSRWLockExclusive(&Rlock);
 		WakeConditionVariable(&QueueFull);
 	}
-	ReleaseSRWLockExclusive(&Rlock);
 	return 0;
 }
 //writer calback functions........................................................
@@ -32,15 +31,14 @@ DWORD WINAPI write(LPVOID Str)
 	if (Tqueue.size()==5)
 	{
 		SleepConditionVariableSRW(&QueueFull, &Wlock, INFINITE, 0);
-		WakeAllConditionVariable(&QueueEmpty);
 	}
 	else
 	{
 		Tqueue.push(++glob);
 		cout << "writer produced :" << glob << endl;
+		ReleaseSRWLockExclusive(&Wlock);
 		WakeAllConditionVariable(&QueueEmpty);
 	}
-	ReleaseSRWLockExclusive(&Wlock);
 	return 0;
 }
 int _tmain(int argc, WCHAR* argv[], WCHAR* env[])

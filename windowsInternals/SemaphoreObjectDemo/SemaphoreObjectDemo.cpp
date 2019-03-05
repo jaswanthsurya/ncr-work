@@ -1,21 +1,67 @@
-// SemaphoreObjectDemo.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include<iostream>
+#include<Windows.h>
+#include<tchar.h>
 
-#include "pch.h"
-#include <iostream>
+using namespace std;
+HANDLE Semaphore;
+#define MAX_THREADS 2  //maximum threads handled at a time by simaphore
+#define TotalThreads 3//total number of threads
 
-int main()
+DWORD WINAPI ThreadFun(LPVOID STR)
 {
-    std::cout << "Hello World!\n"; 
+	BOOL StatusSemaphore=TRUE;
+	DWORD Status,ThreadId;
+	Status=WaitForSingleObject(Semaphore, 0);//semaphore handle returns status depending on the number of threads it can handle
+	/*accordingly swicth the value of the status and do the necessary action required*/
+	switch (Status)
+	{
+	case WAIT_OBJECT_0:
+		ThreadId = GetCurrentThreadId();
+		cout << "thread " << ThreadId << " wait succeded" << endl;
+		//release the semaphore when work is done
+		StatusSemaphore = ReleaseSemaphore(Semaphore,//semaphore handle
+			1,//increment count value
+			NULL);//store present count
+		if (!StatusSemaphore)
+		{
+			cout << "releasing semaphore failed due to error (" << GetLastError() << ")" << endl;
+		}
+		break;
+	case WAIT_TIMEOUT:cout << "thread timeout failed" << endl;//wait timeout indicates that semaphore did not handle the thread as maximum capacity is exceeded
+		break;
+	}
+	return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+int _tmain(int argc, WCHAR *argv[], WCHAR *env[])
+{
+	HANDLE ThreadHandle[TotalThreads];
+	DWORD ThreadId;
+	Semaphore = CreateSemaphore(NULL,//security attributes
+		MAX_THREADS,//initial count
+		MAX_THREADS,//maximum count
+		NULL);//lp name
+	if (Semaphore == NULL)
+	{
+		cout << "creation of semaphore failed due to error (" << GetLastError() << ")" << endl;
+	}
+	for (int i = 0; i < TotalThreads; i++)
+	{
+		ThreadHandle[i] = CreateThread(NULL,//security attributes
+			0,//stack size
+			ThreadFun,//callback function
+			NULL,//input parameter
+			0,//flags
+			&ThreadId);//thread id
+		if (ThreadHandle[i] == NULL)
+		{
+			cout << "creation of thread failed due to error (" << GetLastError() << ")" << endl;
+		}
+	}
+	WaitForMultipleObjects(TotalThreads, ThreadHandle, TRUE, INFINITE);//wait until all the threads complete execution
+	for (int i = 0; i < TotalThreads; i++)
+	{
+		CloseHandle(ThreadHandle[i]);//close the associated handle
+	}
+	return 0;
+}
