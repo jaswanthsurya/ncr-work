@@ -52,11 +52,31 @@ char * StringCpy(string str,char *res)
 	}
 	return res;
 }
+
+bool StringComp(string str, string str1)
+{
+	bool flag = 0;
+	int i = 0;
+	while (str[i]!='\0'||str1[i]!='\0')//traverse until any one of the string reaches the end
+	{
+		if (str[i] != str1[i])
+		{
+			flag = 1;
+			break;
+		}
+		i++;
+	}
+	if (str1[i]=='\0'&&str[i]=='\0'&&flag==0)//if both the strings reach the end and all the elements are equal
+		return 1;
+	else
+		return 0;
+}
+
 int main()
 {
 	int choice;
 	cout << "enter your choice: " << endl;
-	cout << "1.String Reverse" << endl << "2.String concatination" << endl << "3.string copy" << endl;
+	cout << "1.String Reverse" << endl << "2.String concatination" << endl << "3.string copy" << endl<<"4.string compare"<<endl;
 	cin >> choice;
 	if (choice==1&&sizeof(choice)==4)//condition to check wether input entered is integer or not
 	{
@@ -90,7 +110,7 @@ int main()
 		cout << "the resultant string after concatinating " << str << " and " << str1 << " is: ";
 		cout << res<<endl;
 		cout << "strings concatinated......" << endl;
-		delete(res);//deallocate the assigned memory
+		//delete(res);//deallocate the assigned memory
 	}
 	else if (choice == 3 && sizeof(choice) == 4)//condition to check wether input entered is integer or not
 	{
@@ -105,6 +125,21 @@ int main()
 		res = StringCpy(str, res);//call back function
 		cout << "the string " <<"{"<< str << "}" << " at location " << &str << " is copied to address " << &res << endl;
 		delete(res);//deallocate assigned memory
+	}
+	else if (choice == 4 && sizeof(choice) == 4)
+	{
+		cin.ignore();//ignore the enter character entered during giving choice
+		string str, str1;
+		cout << "enter the first string : ";
+		getline(cin, str);
+		cout << "enter the second string  : ";//get the two strings
+		getline(cin, str1);
+		bool Result;
+		Result=StringComp(str, str1);//callback function
+		if (Result)
+			cout << "strings are equal" << endl;
+		else
+			cout << "strings are not equal" << endl;
 	}
 	else
 	{
