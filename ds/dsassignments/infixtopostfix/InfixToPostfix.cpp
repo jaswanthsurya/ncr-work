@@ -148,30 +148,37 @@ int main()
 			}
 			else if (str[i] == ')')//when a close paranthesis is encountered pop elements until open bracket is encountered
 			{
-				while (temp != '(')
+				while (s1.peek() != '(')
 				{
 					temp = s1.pop();
 					ostr[j] = temp;
 					j++;
 				}
-				j--;
+				//j--;
 			}
 			else if (str[i] == ']')
 			{
-				while (temp != '[')
+				while (s1.peek() != '[')
 				{
 					temp = s1.pop();
 					ostr[j] = temp;
 					j++;
 				}
-				j--;
+				//j--;
 			}
 		}
 	}
 	while (!s1.isempty())//popping out elements at the last if any
 	{
-		ostr[j] = s1.pop();
-		j++;
+		if (s1.peek() != '(')
+		{
+			ostr[j] = s1.pop();
+			j++;
+		}
+		else
+		{
+			s1.pop();
+		}
 	}
 	ostr[j] = '\0';//appending null character at the end 
 	j++;
