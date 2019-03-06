@@ -82,6 +82,28 @@ int main()
 				cout << "process terminated" << endl;
 				return 0;
 			}
+			//condition to check wether the characters on the left and right hand side of notation belong to same set
+			else if (((65 <= Sen[counter - 1] && 90 >= Sen[counter - 1]) && !(65 <= Sen[counter + 1] && 90 >= Sen[counter + 1])) ||
+				((97 <= Sen[counter - 1] && 122 >= Sen[counter - 1]) && !(97 <= Sen[counter + 1] && 122 >= Sen[counter + 1])) ||
+				((48 <= Sen[counter - 1] && 57 >= Sen[counter - 1]) && !(48 <= Sen[counter + 1] && 57 >= Sen[counter + 1])))
+			{
+				cout << "entered expression contains invalid short hand notations" << endl;
+				cout << "process terminated" << endl;
+				return 0;
+			}
+			//loops to check any invalid symbols present in the given expression
+			if ((Sen[counter - 1] > 32 && Sen[counter - 1] < 48) || (Sen[counter - 1] > 57 && Sen[counter - 1] < 65))
+			{
+				cout << "short hand notation contains invalid symbols" << endl;
+				cout << "process terminated" << endl;
+				return 0;
+			}
+			else if ((Sen[counter + 1] > 32 && Sen[counter + 1] < 48) || (Sen[counter + 1] > 57 && Sen[counter + 1] < 65))
+			{
+				cout << "short hand notation contains invalid symbols" << endl;
+				cout << "process terminated" << endl;
+				return 0;
+			}
 			else
 			{
 				if((Sen[counter + 1] - Sen[counter - 1])>0)
