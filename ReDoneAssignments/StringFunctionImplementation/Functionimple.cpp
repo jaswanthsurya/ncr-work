@@ -20,9 +20,9 @@ string StringRev(string str, int len)
 /*this function concatinates two given string
 it takes the two strings as input and the third parameter is the output charater array which is modified and returned
 by the function*/
-char * StringConcat(string str, string str1,char* res)
+char * StringConcat(string str, string str1, char* res)
 {
-	int counter = 0,res_count=0;//result counter
+	int counter = 0, res_count = 0;//result counter
 	while (str[counter] != '\0')
 	{
 		res[counter] = str[counter];
@@ -106,9 +106,9 @@ int main()
 		for (counter = 0; str1[counter] != '\0'; counter++);
 		res_count = res_count + counter;//calculating result count
 		res = new char[res_count];//dynamic memory allocation
-		res= StringConcat(str, str1,res);
+		res = StringConcat(str, str1, res);
 		cout << "the resultant string after concatinating " << str << " and " << str1 << " is: ";
-		cout << res<<endl;
+		cout << res << endl;
 		cout << "strings concatinated......" << endl;
 		//delete(res);//deallocate the assigned memory
 	}

@@ -285,7 +285,14 @@ int PostfixEvaluation(char* str)
 			}
 		}
 	}
-	return s1.ipop();
+	int temp = 0;
+	temp = s1.pop();
+	if (!s1.isempty())
+	{
+		cout << "entered invalid input" << endl;
+		exit(0);
+	}
+	return temp;
 }
 
 int main()
@@ -315,11 +322,9 @@ int main()
 	}
 	for (incrementer = 0; str[incrementer] != '\0'; incrementer++);
 	length = incrementer;
-	cout << length << endl;
 	BalanceExpression(str,length);
 	char *ostr = new char[length];//assign dynamic memory for the output string
 	InfixToPostfix(str, ostr);//convert the given string into postfix expression
-	cout << ostr;
 	int result;
 	result=PostfixEvaluation(ostr);
 	cout << "the result is" << result << endl;
