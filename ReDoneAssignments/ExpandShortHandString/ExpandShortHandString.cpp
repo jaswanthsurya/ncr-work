@@ -15,7 +15,7 @@ char * ExpandShortNotation(string Sen,int SenSize, int OSenSize)
 			outp[indicator] = Sen[counter];
 			indicator++;
 		}
-		if (Sen[counter] == '-')//if an - is encountered add the characters that are present in between them
+		if (Sen[counter] == '-')//if an symbol - is encountered add the characters that are present in between them
 		{
 			if ((Sen[counter + 1] - Sen[counter - 1]) > 0)//if the left hand character asci value is lesser than the ascii value  of the right hand character
 			{
