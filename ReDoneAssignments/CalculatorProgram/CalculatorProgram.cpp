@@ -135,6 +135,41 @@ int Stack::checkprec(char c)//function to retrive precedence value of elements i
 	}
 	return x;
 }
+
+void BalanceExpression(string str, int len)
+{
+	int i = 0;
+	Stack s1;
+	s1.getsize(len);
+	for (i = 0; i < len; i++)
+	{
+		switch (str[i])
+		{
+		case '[':
+		case '{':
+		case '(':s1.push(str[i]);
+			break;
+		case ']':
+		case '}':
+		case ')':
+			if ((str[i] == ')'&& s1.peek() == '(') || (str[i] == ']'&& s1.peek() == '[') || (str[i] == '}'&& s1.peek() == '{') && (!s1.isempty()))
+			{
+				s1.pop();
+			}
+			else
+			{
+				break;
+			}
+		}
+	}
+	if (!s1.isempty())
+	{
+		cout << "you have entered unbalanced expression: " << endl;
+		cout << "process terminated" << endl;
+		exit(0);
+	}
+}
+
 void InfixToPostfix(string str,char *ostr)
 {
 	Stack s1;
@@ -275,8 +310,11 @@ int main()
 	}
 	for (incrementer = 0; str[incrementer] != '\0'; incrementer++);
 	length = incrementer;
+	cout << length << endl;
+	BalanceExpression(str,length);
 	char *ostr = new char[length];//assign dynamic memory for the output string
 	InfixToPostfix(str, ostr);//convert the given string into postfix expression
+	cout << ostr;
 	int result;
 	result=PostfixEvaluation(ostr);
 	cout << "the result is" << result << endl;
