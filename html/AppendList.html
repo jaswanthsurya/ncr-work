@@ -1,0 +1,24 @@
+<!doctype html>
+<head>
+	<title>"list appending"</title>
+</head>
+<body style="background-color: blue;color:yellow">
+
+	<p>click on two to append list"</p>
+	<ul>
+		<li>"one"</li>
+		<li id="list" onclick="appendlist()">"two"</li>
+	</ul>
+	<script>
+		function appendlist()
+		{
+			var val=document.getElementById("list");
+			var node=document.createElement("li");
+			var element=document.createTextNode("three");
+			node.append(element);
+			val.append(node);
+		}
+	</script>
+
+</body>
+</html>

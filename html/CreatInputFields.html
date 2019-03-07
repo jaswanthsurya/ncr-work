@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>"create input fields"</title>
+</head>
+<body style="background-color: blue; color:yellow;">
+	Enter number<input type="number" id="one" name="number" placeholder="write number"/><br><br>
+	Enter name<input type="text" name="text" placeholder="enter name"/><br><br>
+	Enter age<input type="number" min="10" max="100" step="20" value="30"/><br><br>
+	<input type="submit" id="click" value="submit" onclick = "getinfo()"/><br>
+	<br><br>
+	choose file<input type="file" id="file" onchange="getsize()">
+<script>
+	function getinfo()
+	{
+		var val=document.getElementById("click");
+		alert("click");
+	}
+	function getsize()
+	{
+		var val1 = document.getElementById("file").files[0].size;
+		alert(val1);
+	}
+</script>
+</body>
+</html>

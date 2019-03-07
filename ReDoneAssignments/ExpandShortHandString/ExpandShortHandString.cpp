@@ -91,14 +91,9 @@ int main()
 				cout << "process terminated" << endl;
 				return 0;
 			}
-			//loops to check any invalid symbols present in the given expression
-			if ((Sen[counter - 1] > 32 && Sen[counter - 1] < 48) || (Sen[counter - 1] > 57 && Sen[counter - 1] < 65))
-			{
-				cout << "short hand notation contains invalid symbols" << endl;
-				cout << "process terminated" << endl;
-				return 0;
-			}
-			else if ((Sen[counter + 1] > 32 && Sen[counter + 1] < 48) || (Sen[counter + 1] > 57 && Sen[counter + 1] < 65))
+			//condition to check any invalid symbols present in the short hand notation
+			else if ((Sen[counter + 1] > 32 && Sen[counter + 1] < 48) || (Sen[counter + 1] > 57 && Sen[counter + 1] < 65)||
+				(Sen[counter - 1] > 32 && Sen[counter - 1] < 48) || (Sen[counter - 1] > 57 && Sen[counter - 1] < 65))
 			{
 				cout << "short hand notation contains invalid symbols" << endl;
 				cout << "process terminated" << endl;
@@ -123,6 +118,6 @@ int main()
 	{
 		cout << outp[counter];
 	}
-	return 0;
 	delete(outp);
+	return 0;
 }

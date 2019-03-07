@@ -18,7 +18,7 @@ string StringRev(string str, int len)
 	return str;
 }
 /*this function concatinates two given string
-it takes the two strings as input and the third parameter is the output charater array which is modified and returned
+it takes the two strings as input and the output charater array is the first parameter which is modified and returned
 by the function*/
 char * StringConcat(char *res,char*src)
 {
@@ -46,7 +46,7 @@ char * StringConcat(char *res,char*src)
 }
 
 /*this function copies string from one location to other
-it takes the string as the input and the destination string as the input and modifed the destination array and return*/
+it takes the string as the input and the destination string as the input and modifes the destination string and returns*/
 char * StringCpy(string str,char *res)
 {
 	int count = 0;
@@ -68,15 +68,15 @@ int StringComp(string str, string str1)
 		{
 			flag = 1;
 			if (str[i] > str1[i])
-				return -1;
+				return 1;
 			break;
 		}
 		i++;
 	}
 	if (str1[i]=='\0'&&str[i]=='\0'&&flag==0)//if both the strings reach the end and all the elements are equal
-		return 1;
-	else
 		return 0;
+	else
+		return -1;
 }
 
 int main()
@@ -85,7 +85,7 @@ int main()
 	while (1)
 	{
 		cout << "enter your choice: " << endl;
-		cout << "1.String Reverse" << endl << "2.String concatination" << endl << "3.string copy" << endl << "4.string compare" << endl;
+		cout << "1.String Reverse" << endl << "2.String concatination" << endl << "3.string copy" << endl << "4.string compare" <<endl<<"5.exit"<< endl;
 		cin >> choice;
 		if (choice == 1 && sizeof(choice) == 4)//condition to check wether input entered is integer or not
 		{
@@ -128,7 +128,8 @@ int main()
 			cout << "the resultant string after concatinating  is: ";
 			cout << res << endl;
 			cout << "strings concatinated......" << endl;
-			//delete(res);//deallocate the assigned memory
+			delete(res);//deallocate the assigned memory
+			delete(src);
 		}
 		else if (choice == 3 && sizeof(choice) == 4)//condition to check wether input entered is integer or not
 		{
@@ -154,7 +155,7 @@ int main()
 			getline(cin, str1);
 			int Result;
 			Result = StringComp(str, str1);//callback function
-			if (Result == 1)
+			if (Result == 0)
 			{
 				cout << Result << endl;
 				cout << "strings are equal" << endl;

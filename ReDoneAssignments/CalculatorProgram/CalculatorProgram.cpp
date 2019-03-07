@@ -136,6 +136,7 @@ int Stack::checkprec(char c)//function to retrive precedence value of elements i
 	return x;
 }
 
+//function to check wether the entered expression is balanced or not
 void BalanceExpression(string str, int len)
 {
 	int i = 0;
@@ -299,25 +300,48 @@ int main()
 {
 	string str;
 	int incrementer = 0,length=0;
-	cout << "enter the expression to be evaluated " << endl<<endl;
+	cout << "enter the expression to be evaluated only single digits are accepted" << endl<<endl;
 	cout << "enter expression without spaces:";
 	getline(cin, str);//get the expression to be evaluated
 	cout << endl;
 	for (incrementer = 0; str[incrementer] != '\0'; incrementer++)//find out wether any spaces are present in the given input
 	{
-		if (str[incrementer] == ' ')
+		if (str[0] == '-' || str[0] == '*' || str[0] == '/' || str[0] == '+')
 		{
-			cout << "entered expression is invalid please enter the expression again without spaces to proceed:";
-			getline(cin, str);
-			break;
-		}
-	}
-	for (incrementer = 0; str[incrementer] != '\0'; incrementer++)//find out wether any spaces are present in the given input
-	{
-		if (str[incrementer] == ' ')
-		{
-			cout << "entered input is invalid terminating the process ...................." << endl;
+			cout << "entered expression is invalid ";
 			return 0;
+		}
+		if (str[incrementer] == ' ')
+		{
+			cout << "entered expression is invalid ";
+			return 0;
+		}
+		if (str[incrementer] == '+' || str[incrementer] == '-' || str[incrementer] == '*' || str[incrementer] == '+' || str[incrementer] == '/')
+		{
+			if (str[incrementer - 1] == '(')
+			{
+				cout << "entered expression is invalid ";
+				return 0;
+			}
+			else if (!(str[incrementer - 1] >= 48 && str[incrementer - 1] <= 57) && 
+				!(str[incrementer + 1] >= 48 && str[incrementer + 1] <= 57))
+			{
+				if (str[incrementer - 1] == '(' || str[incrementer - 1] == ')');
+				else
+				{
+					cout << "entered expression is invalid ";
+					return 0;
+				}
+			}
+		}
+		if (str[incrementer] != '(' || str[incrementer] != ')')
+		{
+			if ((str[incrementer] >= 33 && str[incrementer] <= 39)|| (str[incrementer] >= 58 && str[incrementer] <= 64))
+			{
+				cout << "entered expression is invalid ";
+				return 0;
+
+			}
 		}
 	}
 	for (incrementer = 0; str[incrementer] != '\0'; incrementer++);
@@ -327,7 +351,7 @@ int main()
 	InfixToPostfix(str, ostr);//convert the given string into postfix expression
 	int result;
 	result=PostfixEvaluation(ostr);
-	cout << "the result is" << result << endl;
+	cout << "the result is :" << result << endl;
 	//delete(ostr);//delete allocated memory
 	return 0;
 }
