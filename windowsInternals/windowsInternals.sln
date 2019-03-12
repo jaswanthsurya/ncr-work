@@ -53,6 +53,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaderAndWriterProb", "Read
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SemaphoreObjectDemo", "SemaphoreObjectDemo\SemaphoreObjectDemo.vcxproj", "{FF198C87-F4CE-45B3-94F7-904FF829C5C7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateManualEvent.cpp", "CreateManualEvent.cpp\CreateManualEvent.cpp.vcxproj", "{211C38BC-343A-4A65-9355-F96D6457A394}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -261,6 +263,14 @@ Global
 		{FF198C87-F4CE-45B3-94F7-904FF829C5C7}.Release|x64.Build.0 = Release|x64
 		{FF198C87-F4CE-45B3-94F7-904FF829C5C7}.Release|x86.ActiveCfg = Release|Win32
 		{FF198C87-F4CE-45B3-94F7-904FF829C5C7}.Release|x86.Build.0 = Release|Win32
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Debug|x64.ActiveCfg = Debug|x64
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Debug|x64.Build.0 = Debug|x64
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Debug|x86.ActiveCfg = Debug|Win32
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Debug|x86.Build.0 = Debug|Win32
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Release|x64.ActiveCfg = Release|x64
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Release|x64.Build.0 = Release|x64
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Release|x86.ActiveCfg = Release|Win32
+		{211C38BC-343A-4A65-9355-F96D6457A394}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
