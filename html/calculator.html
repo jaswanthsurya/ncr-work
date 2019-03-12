@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+	<title>mini calculator</title>
+</head>
+<style>
+.box{
+margin:auto;
+background-color: white;
+border:5px solid;
+width:200px;
+height: 260px;
+position: relative;
+}
+.output{
+	background-color:yellow;
+	border:1px solid;
+	width:200px;
+	height:50px;
+	position: relative;
+}
+.row{
+	background-color: orange;
+	border:1px solid;
+	width:200px;
+	height: 50px;
+	position: relative;
+}
+</style>
+<body>
+	<div class="box">
+		<div class="output"><output name="x"></output></div>
+		<div class="row">
+			<button id="1" value="1" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">1</button>&nbsp;
+			<button id="2" value="2" type="button" style=" width:60px;height:40px;" onclick="getnum(value)">2</button>&nbsp;&nbsp;
+			<button id="3" value="3" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">3</button>
+		</div>
+		<div class="row">
+			<button id="4" value="4" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">4</button>&nbsp;
+			<button id="5" value="5" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">5</button>&nbsp;&nbsp;
+			<button id="6" value="6" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">6</button>
+		</div> 
+		<div class="row">
+			<button id="7" value="7" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">7</button>&nbsp;
+			<button id="8" value="8" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">8</button>&nbsp;&nbsp;
+			<button id="9" value="9" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">9</button>
+		</div>
+		<div class="row">
+			<button id="0" value="0" type="button" style=" width:60px;height:40px;"onclick="getnum(value)">0</button>&nbsp;
+			<button id="+" type="button" style=" width:60px;height:40px;"onclick="getdig()">+</button>&nbsp;&nbsp;
+			<button id="=" type="button" style=" width:60px;height:40px;"onclick="getres()">=</button>&nbsp;
+		</div>  
+	</div>
+	<script>
+		var arr=[];
+		var i=0,j=0,k=0,index=0;
+		var pres=0;
+		var res=parseInt(0);
+		function getnum(var1)
+		{
+			arr[i]=parseInt(var1);
+			i=i+1;
+		}
+		function getdig()
+		{
+			j=i-1-index;
+			for(k=index;k<i;k++)
+			{
+				pres=Math.pow(10,j);
+				res=res+(arr[k]*pres);
+				arr[k]=0;
+				j=j-1;
+			}
+			arr[index]=res;
+			res=0;
+			j=0;
+			index++;
+		}
+		function getres()
+		{
+			getdig();
+			alert(arr[0]+arr[1]);
+			arr[0]=0;
+			arr[1]=0;
+			i=0;
+		}
+	</script>
+	</body>
+</html>

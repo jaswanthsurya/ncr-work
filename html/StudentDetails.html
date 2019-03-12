@@ -1,0 +1,32 @@
+<html>
+<title> Student Details</title>
+<body>
+	<h1>Student Registration</h1>
+	<b>FirstName:</b>&nbsp;&nbsp;<input type="text" id="Fname" placeholder="FirstName" required="">&nbsp;&nbsp;
+	<b>MiddleName:</b>&nbsp;&nbsp;<input type="text" id="Mname" placeholder="MiddleName" required="">&nbsp;&nbsp;
+	<b>LastName:</b>&nbsp;&nbsp;<input type="text" id="Lname" placeholder="LastName" required=""><br><br>
+	<b>Photo :</b>&nbsp;&nbsp;<input type="file" id="Photo"><br><br>
+	<b>Education Qualifications:-</b> <br><br>
+	<b>Bachelor Of Technology:</b>&nbsp;&nbsp;<input type="text" id="Btech" placeholder="Btech" required="">&nbsp;&nbsp;
+	<b>Secondary School:</b>&nbsp;&nbsp;<input type="text" id="SecondarySchool" placeholder="Intermediate" required="">&nbsp;&nbsp;
+	<b>Primary School:</b>&nbsp;&nbsp;<input type="text" id="PrimarySchool" placeholder="School" required=""><br><br>
+	<b>Date Of Birth :</b>&nbsp;&nbsp;<input type="date" id="dob" onblur="getDob()"><br><br>
+	<b>Age :</b>&nbsp;&nbsp;<input type="text" id="Age"><br><br>
+	<script>
+		var Curr= new Date();
+		var curr_year=Curr.getFullYear();
+		var curr_month=Curr.getMonth();
+		function getDob()
+		{
+			var UserDob=document.getElementById("dob").value;	
+			var UserYear=new Date(UserDob);
+			var user_year=UserYear.getFullYear();
+			var user_month=UserYear.getMonth()+1;
+			var Month=curr_month-user_month;
+			var Year=curr_year-user_year;
+			var age=document.getElementById("Age");
+			age.value=Year;
+		}
+	</script>
+</body>
+</html>

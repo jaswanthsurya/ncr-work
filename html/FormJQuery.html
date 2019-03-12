@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Form</title>
+</head>
+<script src="jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+	$("#checkbox").click(function(){
+		$("#5").val($("#1").val());
+		$("#6").val($("#2").val());
+		$("#7").val($("#3").val());
+		$("#8").val($("#4").val());
+	});
+	$("#button").click(function(){
+		$("#form").toggle();
+		if($("#button").val()=="hide")
+			$("#button").val("show");
+		else if($("#button").val()=="show")
+			$("#button").val("hide");
+	});
+	});
+</script>
+<body>
+	<input type="button" id="button" value="hide"><br>
+	<form id="form">
+		<h1>Permanant address</h1>
+		House-No:
+		<input placeholder ="H-NO" type="text" name="h-no" id="1" required><br><br>
+		Landmark:
+		<input placeholder="Landmark" type="text" name="landmark" id="2"required><br><br>
+		Mandal:
+		<input placeholder="Mandal" type="text" name="Mandal" id="3" required><br><br>
+		City:
+		<input placeholder="City" type="text" name="City" id="4"required><br><br>
+		<input type="checkbox" id="checkbox"><b>Click if present address is same as permanant address</b><br>
+		<h1>Present Address</h1>
+		House-No:
+		<input placeholder ="H-NO" type="text" name="h-no" id="5"><br><br>
+		Landmark:
+		<input placeholder="Landmark" type="text" name="landmark" id="6"required><br><br>
+		Mandal:
+		<input placeholder="Mandal" type="text" name="Mandal" id="7"required><br><br>
+		City:
+		<input placeholder="City" type="text" name="City" id="8"required><br><br>
+	</form>
+</body>
+</html>
