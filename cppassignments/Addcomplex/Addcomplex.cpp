@@ -6,6 +6,7 @@ variables of the class in order to make external functions access the private va
 
 #include<iostream>
 #include<string.h>
+#include<typeinfo>//for getting type of variables
 
 using namespace std;
 class complexnum {
@@ -48,14 +49,35 @@ int main()
 		real2=0,
 		img1=0, 
 		img2=0;
+	cout << "using type (" << typeid(real1).name() << ") for all the variables so provide inputs accordingly" << endl;
 	cout << "enter the real part of the first complex number :";
 	cin >> real1;
+	if (cin.fail())
+	{
+		cout << "provided wrong input " << endl;
+		return 0;
+	}
 	cout << "enter the imaginary part of the first complex number :";
 	cin >> img1;
+	if (cin.fail())
+	{
+		cout << "provided wrong input " << endl;
+		return 0;
+	}
 	cout << "enter the real part of the second complex number :";
 	cin >> real2;
+	if (cin.fail())
+	{
+		cout << "provided wrong input " << endl;
+		return 0;
+	}
 	cout << "enter the imaginary part of the second complex number :";
 	cin >> img2;
+	if (cin.fail())
+	{
+		cout << "provided wrong input " << endl;
+		return 0;
+	}
 	if (real1 == 0 && real2 == 0 && img1 == 0 && img2 == 0)
 	{
 		cout << endl;
