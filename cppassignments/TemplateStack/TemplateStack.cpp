@@ -1,5 +1,7 @@
-#include<iostream>
+/*program to implement template stack*/
 
+#include<iostream>
+#include<typeinfo>//to get the type of variable
 using namespace std;
 
 int flag = 0;
@@ -8,19 +10,19 @@ class complex
 	int real;
 	int img;
 public:
-	complex()
+	complex()//constructor
 	{
 		real = img = 0;
 	}
-	friend istream& operator>>(istream& cin, complex &c);
-	friend ostream& operator<<(ostream& cout, complex &c);
-	~complex()
+	friend istream& operator>>(istream& cin, complex &c);//overloaded cin  operator as a friend function
+	friend ostream& operator<<(ostream& cout, complex &c);//overloaded cout operator as a friend function
+	~complex()//destructor
 	{
 
 	}
 };
 
-istream& operator>>(istream& cin, complex &c)
+istream& operator>>(istream& cin, complex &c)//overloaded function for cin
 {
 	cout << "enter the real part: ";
 	cin >> c.real;
@@ -29,7 +31,7 @@ istream& operator>>(istream& cin, complex &c)
 	return cin;
 }
 
-ostream& operator<<(ostream& cout, complex &c)
+ostream& operator<<(ostream& cout, complex &c)//overloaded function for cout
 {
 	cout << "the real part is:" << c.real << endl;
 	cout << "the imaginary part is:" << c.img << endl;
@@ -63,6 +65,10 @@ public:
 	T pop()//function to delete or pop element from the stack
 	{
 		T b;
+		if (sizeof(b) == 4 || sizeof(b) == 8)//initialise variables
+			b = 0;
+		else if (sizeof(b) == 1)
+			b = '0';
 		if (!isempty())
 		{
 			return arr[top--];
@@ -77,6 +83,10 @@ public:
 	T peek()//function to just view top of stack
 	{
 		T b;
+		if (sizeof(b) == 4||sizeof(b)==8)//initialise the variables
+			b = 0;
+		else if (sizeof(b) == 1)
+			b = '0';
 		if (!isempty())
 		{
 			return arr[top];
@@ -88,6 +98,15 @@ public:
 			return b;
 		}
 	}
+	void display()//display function
+	{
+		int i = 0;
+		for (i = 0; i <= top; i++)
+		{
+			cout << arr[i];
+		}
+		cout << endl;
+	}
 	bool isfull()//conditional function returning wether stack is full or not
 	{
 		return(top == size-1);
@@ -98,33 +117,41 @@ public:
 	}
 };
 
-# define type complex //define either int,float,char,double,complex
+# define type double //define either int,float,char,double,complex
 int main()
 {
 	int size = 0,choice=0;
-	stack <type>intstack;//template class definition
+	stack <type>typestack;//template class definition
 	type ele;
+	cout << "using data type (" << typeid(type).name() << ") in stack so provide input accordingly" << endl;
 	cout << "enter size of stack: ";
 	cin >> size;
-	if (sizeof(size) != 4)//input validation for checking wether correct size is mentioned
+	if (sizeof(size) != 4 || size == 0)//input validation for checking wether correct size is mentioned
 	{
 		cout << "invalid size" << endl;
 		return 0;
 	}
-	intstack.getsize(size);//initialise the stack with size provided
+	typestack.getsize(size);//initialise the stack with size provided
 	while (1)
 	{
-		cout << "enter choice: " << endl << "1.push" << endl << "2.pop" << endl << "3.peek" << endl << "4.exit" << endl;
+		cout << "enter choice: " << endl << "1.push" << endl << "2.pop" << endl << "3.peek" << endl << "4.display"<<endl 
+			<< "5.exit" << endl;
 		cin >> choice;
 		if (choice == 1 && sizeof(choice) == 4)//push element
 		{
 			cout << "enter the element to push :";
 			cin >> ele;
-			intstack.push(ele);
+			if (cin.fail())
+			{
+				cout << "provided wrong input" << endl;
+				cout << "process terminated" << endl;
+				return 0;
+			}
+			typestack.push(ele);
 		}
 		else if (choice == 2 && sizeof(choice) == 4)//pop element
 		{
-			ele = intstack.pop();
+			ele = typestack.pop();
 			if (!flag)
 			{
 				cout << "popped :" << ele << endl;
@@ -133,14 +160,18 @@ int main()
 		}
 		else if (choice == 3 && sizeof(choice) == 4)//peek top element
 		{
-			ele = intstack.peek();
+			ele = typestack.peek();
 			if (!flag)
 			{
 				cout << "top element is :" << ele << endl;
 			}
 			flag = 0;
 		}
-		else if (choice == 4 && sizeof(choice) == 4)//exit
+		else if (choice == 4 && sizeof(choice) == 4)//display
+		{
+			typestack.display();
+		}
+		else if (choice == 5 && sizeof(choice) == 4)//exit
 		{
 			return 0;
 		}
