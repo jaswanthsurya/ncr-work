@@ -1,18 +1,22 @@
+/*function to create an employee class with employee details and populate five objects of employees by overloading cin and
+cout functions
+*/
+
 #include<iostream>
 
 using namespace std;
 class employee {
 	int empno;
 	char name[20];
-	long int salary;
+	long int salary;//employee details
 public:
-	employee()
+	employee()//constructor
 	{
 
 	}
-	friend istream& operator>>(istream& cin, employee &e);
-	friend ostream& operator<<(ostream& cout, employee &e);
-	~employee()
+	friend istream& operator>>(istream& cin, employee &e);//overloaded cin function
+	friend ostream& operator<<(ostream& cout, employee &e);//overloaded cout function
+	~employee()//destructor
 	{
 
 	}
@@ -39,7 +43,7 @@ ostream& operator<<(ostream& cout, employee &e)
 }
 int main()
 {
-	employee e[5];
+	employee e[5];//array of employee objects
 	for (int i = 0; i < 5; i++)
 	{
 		cin >> e[i];

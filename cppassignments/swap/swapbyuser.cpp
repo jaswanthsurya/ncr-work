@@ -1,8 +1,10 @@
+/*program to demonstrate the use of call by value and call by reference*/
+
 #include<iostream>
 
 using namespace std;
-void swapbyval(int, int);
-void swapbyref(int *, int *);
+void swapbyval(int, int);//prototype for call by value function
+void swapbyref(int *, int *);//prototype for call by reference function
 int main()
 {
 	int n = 0,a=0,b=0;

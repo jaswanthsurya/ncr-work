@@ -1,3 +1,5 @@
+//program to overload all arithmetic operations
+
 #include<iostream>
 
 using namespace std;
@@ -7,17 +9,17 @@ class overload
 	int x;
 	int y;
 public:
-	overload()
+	overload()//constructor
 	{
 		x = 0;
 		y = 0;
 	}
-	overload(int x, int y)
+	overload(int x, int y)//parameterised constructor
 	{
 		this->x = x;
 		this->y = y;
 	}
-	overload(int x)
+	overload(int x)//parameterised contructor
 	{
 		this->x = x;
 		this->y = x;
@@ -27,26 +29,26 @@ public:
 		cout << "the value of x :" << x << endl;
 		cout << "the value of y :" << y << endl;
 	}
-	overload operator+(overload &e)
+	overload operator+(overload &e)//overloaded binary addition operator
 	{
 		this->x = this->x + e.x;
 		this->y = this->y + e.y;
 		return (*this);
 	}
-	overload operator-(overload &e)
+	overload operator-(overload &e)//overloaded binary subtraction operator
 	{
 		this->x = this->x - e.x;
 		this->y = this->y - e.y;
 		return (*this);
 	}
-	overload operator-()
+	overload operator-()//overloaded unary - operator
 	{
 		this->x = -(this->x);
 		this->y = -(this->y);
 		return (*this);
 	}
-	friend ostream& operator<<(ostream& cout, overload &o);
-	friend istream& operator>>(istream& cin, overload &o);
+	friend ostream& operator<<(ostream& cout, overload &o);//overloaded cout operator
+	friend istream& operator>>(istream& cin, overload &o);//overloaded cin operator
 	overload operator++(int x)//postfix
 	{
 		overload o;
@@ -54,7 +56,7 @@ public:
 		o.y = this->y++;
 		return o;
 	}
-	overload operator++()
+	overload operator++()//prefix overloading
 	{
 		++x;
 		++y;

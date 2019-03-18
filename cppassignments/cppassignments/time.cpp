@@ -1,3 +1,8 @@
+/*below program is to create class of type time which holds the seconds minutes and hours 
+it consists of constructor and a destructor and a member function to display the time in
+system format and a member function to add two time objects and generate the result
+*/
+
 #include<iostream>
 using namespace std;
 class time {
@@ -5,43 +10,44 @@ class time {
 	int seconds;
 	int hours;
 public:
-	time()
+	time()// default constructor initialised when object is created
 	{
 		hours = minutes = seconds = 0;
 	}
-	time(int h, int m, int s)
+	time(int h, int m, int s)//parameterised constructor 
 	{
 		hours = h;
 		minutes = m;
 		seconds = s;
 	}
-	void display()
+	void display()//display function
 	{
 		cout << hours << ':' << minutes << ':' << seconds << endl;
 	}
+	/*this function is to add two time objects and store the final result in the third time object*/
 	void add(time &t1, time &t2)
 	{
-		int temp1=0, temp2=0;
+		int SecondsI=0, MinutesI=0;
 		seconds = t1.seconds + t2.seconds;
 		if (seconds>60)
 		{
-			temp1 = 1;
+			SecondsI = 1;
 			seconds = seconds-60;
 		}
-		minutes = t1.minutes + t2.minutes + temp1;
+		minutes = t1.minutes + t2.minutes + SecondsI;
 		if (minutes>60)
 		{
-			temp2 = 1;
+			MinutesI = 1;
 			minutes = minutes-60;
 		}
-		hours = t1.hours + t2.hours + temp2;
+		hours = t1.hours + t2.hours + MinutesI;
 	}
 
 };
 int main()
 {
-	time t1;
-	time t2(1, 30, 31);
+	time t1;//object created using default constructor
+	time t2(1, 30, 31);//objects created using parameterised constructor
 	time t3(2, 31, 30);
 	cout << "time for object t1 ";
 	t1.display();
