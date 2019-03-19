@@ -41,28 +41,23 @@ void tree::insert(int n)
 	insertfun(n, start);//call the insert function with start
 }
 
-struct node * insertfun(int ele, struct node *temp)
+struct node * insertfun(int ele, struct node * temp)
 {
-	struct node *temp1;
 	if (temp == NULL)//if temp reaches null then insert the node and return its address
 	{
-		temp1 = new node;
+		struct node *temp1 = new node;
 		temp1->data = ele;
 		temp1->right = NULL;
-		temp1->right = NULL;
+		temp1->left = NULL;
 		temp = temp1;
-		return temp1;
 	}
-	else
+	else if (ele > temp->data)//if the value is greater than root then call insert function for right subtree
 	{
-		if (ele > temp->data)//if the value is greater than root then call insert function for right subtree
-		{
-			temp->right=insertfun(ele, temp->right);
-		}
-		else//if value is less than root then call insert function for left subtree
-		{
-			temp->left=insertfun(ele, temp->left);
-		}
+		temp->right = insertfun(ele, temp->right);
+	}
+	else if (ele < temp->data)//if value is less than root then call insert function for left subtree
+	{
+		temp->left = insertfun(ele, temp->left);
 	}
 	return temp;
 }
