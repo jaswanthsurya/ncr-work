@@ -69,28 +69,15 @@ public:
 	}
 	bool operator<(myString &s)//operator to check which of the string is greater used for sorting
 	{
-		int i = 0, length;
-		if (s.length < this->length)
-			length = s.length;
-		else
-			length = this->length;
-		for (i = 0; i < length; i++)
-		{
-			if (this->name[i] < s.name[i])
-			{
-				return 1;
-			}
-		}
-		return 0;
+		return (strcmp(this->name,s.name));
 	}
 	friend istream& operator>>(istream& cin, myString &s);
 	friend ostream& operator<<(ostream& cout, myString &s);//overloaded functions of cin and cout
-	friend void SortObjects(myString &s, int length);
+	friend void SortObjects(myString *s, int length);
 	~myString()//destructor
 	{
 		delete(name);//delete associated memory to avoid memory leak
 		length = 0;
-		cout << "destruted" << endl;
 	}
 };
 istream& operator>>(istream& cin, myString &s)//overloaded cin function to read the object variables
@@ -131,7 +118,7 @@ void SortObjects(myString *s,int length)
 	{
 		for (j = 0; j < length - i - 1; j++)
 		{
-			if (s[j] < s[j+1])
+			if ((s[j] < s[j+1])>=0)
 			{
 				myString temp;
 				temp = s[j];

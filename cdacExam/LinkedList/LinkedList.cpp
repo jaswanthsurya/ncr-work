@@ -31,7 +31,7 @@ public:
 	void deleteNodeWithval(int data);//deleting node with given value
 	void displayFor();//display elements in forward direction
 	void reverseList();//reversing the linked list//wrapper function
-	void display(struct node*temp);
+	void display(struct node*temp);//reccursive function
 	void displayRev();//display the linked list in reverse order
 };
 void LinkedList::insertAtPos(int data, int pos)//function to insert node at given position
@@ -83,7 +83,7 @@ void LinkedList::insertFront(int data)//function to insert at front in the linke
 void LinkedList::deleteNodeWithval(int data)//deleting the given node with value
 {
 	struct node *temp = start, *temp1 = start;
-	if (start->data == data)//if start has the given data
+	if (start->data == data)//if start node has the given data
 	{
 		start = start->next;
 		cout << "deleted element : " << temp->data << endl;
@@ -173,11 +173,11 @@ int main()
 	while (1)
 	{
 		cout << "enter your choice: " << endl;
-		cout << "1.insert at pos" << endl << "2.insert at front" << endl << "3.delete node with val" << endl
-			<< "4.display forward" << endl << "5.display reverse" << endl << "6.reverse linked list" << endl
-			<< "7.exit" << endl;
+		cout << "1.  insert at pos" << endl << "2.  insert at front" << endl << "3.  delete node with val" << endl
+			<< "4.  display forward" << endl << "5.  display reverse" << endl << "6.  reverse linked list" << endl
+			<< "7.  exit" << endl;
 		cin >> choice;
-		if (cin.fail())
+		if (cin.fail())//error handler
 		{
 			cout << "invalid choice" << endl;
 			return 0;
