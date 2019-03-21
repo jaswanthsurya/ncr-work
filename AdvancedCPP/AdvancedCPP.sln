@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConversionFunctionDemo", "C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConstantMemberFunctionDemo", "ConstantMemberFunctionDemo\ConstantMemberFunctionDemo.vcxproj", "{5C89A4B8-5303-4A02-A8C4-B09D8F726350}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixClassOverloading", "MatrixClassOverloading\MatrixClassOverloading.vcxproj", "{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{5C89A4B8-5303-4A02-A8C4-B09D8F726350}.Release|x64.Build.0 = Release|x64
 		{5C89A4B8-5303-4A02-A8C4-B09D8F726350}.Release|x86.ActiveCfg = Release|Win32
 		{5C89A4B8-5303-4A02-A8C4-B09D8F726350}.Release|x86.Build.0 = Release|Win32
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Debug|x64.ActiveCfg = Debug|x64
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Debug|x64.Build.0 = Debug|x64
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Debug|x86.ActiveCfg = Debug|Win32
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Debug|x86.Build.0 = Debug|Win32
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Release|x64.ActiveCfg = Release|x64
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Release|x64.Build.0 = Release|x64
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Release|x86.ActiveCfg = Release|Win32
+		{9BFE2B0B-7A26-49F6-9BE9-E3EA0BADEC27}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
