@@ -41,6 +41,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinearSearchTemplate", "Lin
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HydbridInheritance", "HydbridInheritance\HydbridInheritance.vcxproj", "{B0A5C0BE-A0FA-42C8-B007-51B2AD41F07C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DequeUsingLinkedList", "DequeUsingLinkedList\DequeUsingLinkedList.vcxproj", "{B2272951-688E-4575-8B83-6238C9E78D91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -201,6 +203,14 @@ Global
 		{B0A5C0BE-A0FA-42C8-B007-51B2AD41F07C}.Release|x64.Build.0 = Release|x64
 		{B0A5C0BE-A0FA-42C8-B007-51B2AD41F07C}.Release|x86.ActiveCfg = Release|Win32
 		{B0A5C0BE-A0FA-42C8-B007-51B2AD41F07C}.Release|x86.Build.0 = Release|Win32
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Debug|x64.ActiveCfg = Debug|x64
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Debug|x64.Build.0 = Debug|x64
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Debug|x86.ActiveCfg = Debug|Win32
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Debug|x86.Build.0 = Debug|Win32
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Release|x64.ActiveCfg = Release|x64
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Release|x64.Build.0 = Release|x64
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Release|x86.ActiveCfg = Release|Win32
+		{B2272951-688E-4575-8B83-6238C9E78D91}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -207,7 +207,7 @@ select min(sal) as minimumsalary,deptno from emp where mgr in(select mgr from em
 
 /*27)*/ select max(sal) as maximumsalary,job from emp group by(job) order by(max(sal)) desc
 
-/*28)*/
+/*28)*/ 
 
 
 /*cursors...................................................*/

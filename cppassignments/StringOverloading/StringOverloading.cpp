@@ -30,7 +30,7 @@ public:
 		sptr[i] = '\0';
 		this->len = len;
 	}
-	String(String &s)//copy constructor for deep copying the string to avoid dangling reference
+	String(const String &s)//copy constructor for deep copying the string to avoid dangling reference
 	{
 		if (sptr != NULL)//deallocate the assigned memory and make the pointer free to avoid memory leak
 		{
@@ -135,18 +135,27 @@ ostream& operator<<(ostream& cout, String &s)//overloaded cout function to displ
 
 int main()
 {
-	String s1;
-	cin >> s1;
-	cout << s1;//using overloaded cin and cout operators
-	String s2;
-	cin >> s2;
-	cout << s2;//using overloaded cin and cout operators
-	String s3(s1);//using copy constructor
-	cout << "using copy constructor function" << endl;
-	cout << s3;
-	String s4;
-	s4 = s1;//using overloaded = operator
-	cout << s4;
-	s2 + s1;
+	//String s1;
+	//cin >> s1;
+	//cout << s1;//using overloaded cin and cout operators
+	//String s2;
+	//cin >> s2;
+	//cout << s2;//using overloaded cin and cout operators
+	//String s3(s1);//using copy constructor
+	//cout << "using copy constructor function" << endl;
+	//cout << s3;
+	//String s4;
+	//s4 = s1;//using overloaded = operator
+	//cout << s4;
+	//s2 + s1;
+	//String s1,s2;
+	//s2 = s1;
+	const String s3("hello");
+	String s4 = s3;
+	String s5(s3);
+	cout << s5;
+
+	String s7("hai");
+	String s8 = s7;
 	return 0;
 }
