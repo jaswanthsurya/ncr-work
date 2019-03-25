@@ -205,6 +205,13 @@ int main()
 	cout << "enter the data structure u want to create: " << endl;
 	cout << "1.double ended queue" << endl << "2.stack" << endl << "3.queue" << endl << "4.exit" << endl;
 	cin >> ds;
+	while (cin.fail())
+	{
+		cin.clear();
+		cin.ignore();
+		cout << "entered input is invalid please enter again to proceed :";
+		cin >> ds;
+	}
 	if (ds == 1 && sizeof(ds) == 4)//check if wether choice entered is correct and valid integer
 	{
 		Deque deobj;//parent class object
@@ -214,31 +221,36 @@ int main()
 			cout << "1.insert front" << endl << "2.insert rear" << endl << "3.delete front" << endl
 				<< "4.delete rear" << endl << "5.display" << endl << "6.exit" << endl;
 			cin >> choice;
-			if (cin.fail())
+			while (cin.fail())//wait until correct input is entered
 			{
-				cout << "invalid choice try again" << endl;
+				cin.clear();
+				cin.ignore();
+				cout << "entered input is invalid please enter again to proceed :";
+				cin >> choice;
 			}
-			else
+			switch (choice)
 			{
-				switch (choice)
-				{
 				case 1:cout << "enter data to insert: ";
 					cin >> data;
-					if (cin.fail())
+					while (cin.fail())//wait until correct input is entered
 					{
-						cout << "invalid data try again" << endl;
+						cin.clear();
+						cin.ignore();
+						cout << "entered input is invalid please enter again to proceed :";
+						cin >> data;
 					}
-					else
-						deobj.insertFront(data);
+					deobj.insertFront(data);
 					break;
 				case 2:cout << "enter data to insert: ";
 					cin >> data;
-					if (cin.fail())
+					while (cin.fail())//wait until correct input is entered
 					{
-						cout << "invalid data try again" << endl;
+						cin.clear();
+						cin.ignore();
+						cout << "entered input is invalid please enter again to proceed :";
+						cin >> data;
 					}
-					else
-						deobj.insertRear(data);
+					deobj.insertRear(data);
 					break;
 				case 3:
 					data = deobj.deleteFront();
@@ -259,7 +271,6 @@ int main()
 				case 6:return 0;
 					break;
 				default:cout << "invalid choice" << endl;
-				}
 			}
 		}
 	}
@@ -273,22 +284,25 @@ int main()
 			cout << "1.push" << endl << "2.pop" << endl << "3.peek" << endl
 				<< "4.display" << endl << "5.exit" << endl;
 			cin >> choice;
-			if (cin.fail())
+			while (cin.fail())//wait unti correct input is entered
 			{
-				cout << "invalid choice try again" << endl;
+				cin.clear();
+				cin.ignore();
+				cout << "entered input is invalid please enter again to proceed :";
+				cin >> choice;
 			}
-			else
+			switch (choice)
 			{
-				switch (choice)
-				{
 				case 1:cout << "enter data to insert: ";
 					cin >> data;
-					if (cin.fail())
+					while (cin.fail())//wait until correct input is entered
 					{
-						cout << "invalid data try again" << endl;
+						cin.clear();
+						cin.ignore();
+						cout << "entered input is invalid please enter again to proceed :";
+						cin >> data;
 					}
-					else
-						sobj.push(data);
+					sobj.push(data);
 					break;
 				case 2:
 					data = sobj.pop();
@@ -309,7 +323,6 @@ int main()
 				case 5:return 0;
 					break;
 				default:cout << "invalid choice" << endl;
-				}
 			}
 		}
 	}
@@ -322,22 +335,25 @@ int main()
 			cout << "1.insert" << endl << "2.delete" << endl << "3.display" << endl
 				<< "4.exit" << endl;
 			cin >> choice;
-			if (cin.fail())
+			while (cin.fail())//wait until correct input is entered
 			{
-				cout << "invalid choice try again" << endl;
+				cin.clear();
+				cin.ignore();
+				cout << "entered input is invalid please enter again to proceed :";
+				cin >> choice;
 			}
-			else
-			{
-				switch (choice)
+			switch (choice)
 				{
 				case 1:cout << "enter data to insert: ";
 					cin >> data;
-					if (cin.fail())
+					while (cin.fail())//wait until correct input is entered
 					{
-						cout << "invalid data try again" << endl;
+						cin.clear();
+						cin.ignore();
+						cout << "entered input is invalid please enter again to proceed :";
+						cin >> data;
 					}
-					else
-						qobj.insert(data);
+					qobj.insert(data);
 					break;
 				case 2:
 					data = qobj.deleteele();
@@ -351,7 +367,6 @@ int main()
 				case 4:return 0; 
 					break;
 				default:cout << "invalid choice" << endl;
-				}
 			}
 		}
 	}
