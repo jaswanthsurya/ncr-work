@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "templatequeue", "templatequ
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentClassDerivingAndVirtual", "StudentClassDerivingAndVirtual\StudentClassDerivingAndVirtual.vcxproj", "{665A3B4B-EA17-481A-8C0A-AD9C4EAB16DF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShapeClassDerivingUsingVirtual", "ShapeClassDerivingUsingVirtual\ShapeClassDerivingUsingVirtual.vcxproj", "{2BE54883-7635-4B81-80FC-AC8C9DBFABED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{665A3B4B-EA17-481A-8C0A-AD9C4EAB16DF}.Release|x64.Build.0 = Release|x64
 		{665A3B4B-EA17-481A-8C0A-AD9C4EAB16DF}.Release|x86.ActiveCfg = Release|Win32
 		{665A3B4B-EA17-481A-8C0A-AD9C4EAB16DF}.Release|x86.Build.0 = Release|Win32
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Debug|x64.ActiveCfg = Debug|x64
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Debug|x64.Build.0 = Debug|x64
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Debug|x86.ActiveCfg = Debug|Win32
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Debug|x86.Build.0 = Debug|Win32
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Release|x64.ActiveCfg = Release|x64
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Release|x64.Build.0 = Release|x64
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Release|x86.ActiveCfg = Release|Win32
+		{2BE54883-7635-4B81-80FC-AC8C9DBFABED}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
